@@ -38,14 +38,14 @@ const char *fractal_get_name(const struct fractal *f)
 int fractal_get_value(const struct fractal *f, int x, int y)
 {
     int width = fractal_get_width(f);
-    int linpos = y*width+x;
+    int linpos = (y-1)*width+(x-1);
     return f->values[linpos];
 }
 
 void fractal_set_value(struct fractal *f, int x, int y, int val)
 {
   int width = fractal_get_width(f);
-  int linpos = y*width+x;
+  int linpos = (y-1)*width+(x-1);
   f->values[linpos] = val;
 }
 
