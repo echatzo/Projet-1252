@@ -2,12 +2,12 @@
 #define _FRACTAL_H
 
 struct fractal {
-    char name[64];
+    char* name;
     uint32_t w;
     uint32_t h;
     double a;
     double b;
-    int value;
+    int* values;
 };
 
 /*
