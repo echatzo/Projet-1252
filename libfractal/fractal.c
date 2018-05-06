@@ -8,7 +8,7 @@ struct fractal *fractal_new(const char *name, int width, int height, double a, d
   int n = 64;
   strncpy(fract->name, name, (size_t) n);
 
-  f->value = (int *) malloc(height * width * sizeof(int));
+  f->values = (int *) malloc(height * width * sizeof(int));
   check_mem(fract);
 
   fract->h = height;
@@ -20,13 +20,13 @@ struct fractal *fractal_new(const char *name, int width, int height, double a, d
   return fract;
   error:
     if(fract) free(fract);
-    if(fract->value) fractal_free(fract->value);
+    if(fract->values) fractal_free(fract->values);
     exit(EXIT_FAILURE);
 }
 
 void fractal_free(struct fractal *f)
 {
-    free(f->value);
+    free(f->values);
     free(f);
 }
 
@@ -39,14 +39,14 @@ int fractal_get_value(const struct fractal *f, int x, int y)
 {
     int width = fractal_get_width(f);
     int linpos = (y-1)*width+(x-1);
-    return f->value[linpos];
+    return f->values[linpos];
 }
 
 void fractal_set_value(struct fractal *f, int x, int y, int val)
 {
   int width = fractal_get_width(f);
   int linpos = (y-1)*width+(x-1);
-  f->value[linpos] = val;
+  f->values[linpos] = val;
 }
 
 int fractal_get_width(const struct fractal *f)
