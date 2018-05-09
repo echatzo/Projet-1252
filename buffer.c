@@ -25,3 +25,16 @@ void add (fractal *added){
     list_length++;
   }
 }
+
+void remove (){
+  if (first == NULL){
+    return;
+  }
+
+  if (first == last){
+    head = NULL;
+  }
+
+  tail = tail -> previous;
+  tail -> next = NULL;
+}
