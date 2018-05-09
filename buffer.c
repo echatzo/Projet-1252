@@ -1,34 +1,40 @@
-#include <assert.h>
-#include <error.h>
-#include <getopt.h>
-#include <pthread.h>
-#include <semaphore.h>
 #include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 
-void *file_reader (char *name){
+struct node *new_list(){
+  struct node *buffer = (node *) malloc(list_length * sizeof(node));
+  return buffer;
+}
 
-  File *to_read = NULL;
-  to_read = fopen(name,"r");
+void add (fractal *added){
 
-  if (to_read == NULL){
-    perror("Error : ");
+  struct node *new;
+
+  new -> fract = added;
+  new -> next = first;
+  new -> previous = NULL;
+
+  if (first == NULL){
+    first = new;
+    last = first;
+    list_length = 1;
+  } else {
+    first -> previous = new;
+    first = new;
+    list_length++;
+  }
+}
+
+void remove (){
+  if (first == NULL){
+    return;
   }
 
-  fractal_t *new_fract = NULL;
-  char line[500], name[65];
-	int width, height;
-  double a, b;
-
-  while(fgets(line, 500, to_read)){
-    if (line[0] != '#' && sscanf(line, "%s %d %d %lf %lf", name, &width, &height, &a, &b) == 5){
-      new_fract = fractal_new(name, width, height, a, b);
-    }
-    else {
-      perror("Error : ");
-    }
+  if (first == last){
+    head = NULL;
   }
 
+  tail = tail -> previous;
+  tail -> next = NULL;
 }
