@@ -24,5 +24,5 @@ void *file_reader (char *name){
       perror("Error : ");
     }
   }
-
+  return NULL;
 }
