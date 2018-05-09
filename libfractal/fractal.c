@@ -3,7 +3,7 @@
 
 struct fractal *fractal_new(const char *name, int width, int height, double a, double b)
 {
-  fractal_t *fract = (fractal_t *) malloc(sizeof(fractal_t *));
+  fractal *fract = (fractal *) malloc(sizeof(fractal *));
   check_mem(fract);
   int n = 64;
   strncpy(fract->name, name, (size_t) n);

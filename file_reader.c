@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include <string.h>
 
+#include "reader.h"
+
 void *file_reader (char *name){
 
   File *to_read = NULL;
@@ -12,7 +14,7 @@ void *file_reader (char *name){
   }
 
   fractal_t *new_fract = NULL;
-  char line[500], name[65];
+  char line[500], name[64];
 	int width, height;
   double a, b;
 
