@@ -16,34 +16,34 @@
 
 void *compute(void *param)
 {
-	struct fractal *tmp = NULL;
+	struct fractal *computing_fract = NULL;
 
 	int *arg = (int *) param;
 
-	while (is_reading != 0) {
-		tmp = NULL;
+	while (curently_reading != 0) {
+		computing_fract = NULL;
 
 		sem_wait(&full);
 		pthread_mutex_lock(&mutex_buffer);
-		tmp = dequeue();
+		computing_fract = dequeue();
 		pthread_mutex_unlock(&mutex_buffer);
 		sem_post(&empty);
 
-		check(!tmp, "erreur avec dequeue.");
+		check(!computing_fract, "erreur de dequeue.");
 
 		int x = 0;
 		int y = 0;
-		int width = fractal_get_width(tmp);;
-		int height = fractal_get_height(tmp);
+		int width = fractal_get_width(computing_fract);;
+		int height = fractal_get_height(computing_fract);
 		int value = 0;
 
 		double average = 0;
 		double total = width * height;
 
-		log_info("Start calcul de fractales");
+		log_info("Lancement calcul de fractales");
 		for ( y = 0; y < height ; y++) {
 			for( x = 0; x < width ; x++)  {
-				value = fractal_compute_value(tmp, x, y);
+				value = fractal_compute_value(computing_fract, x, y);
 				average += value;
 			}
 			log_info("Vous etes ici");
@@ -51,24 +51,24 @@ void *compute(void *param)
 
 		average /= total;
 
-		tmp->average = average;
+		computing_fract->average = average;
 
 		char n[SIZE_MAX] = "";
 		char *name = n;
 
-		strcpy(name, tmp->name);
+		strcpy(name, computing_fract->name);
 		strcat(name, ".bmp");
 
 		if (print_all) { // option d active
-			write_bitmap_sdl(tmp, name);
+			write_bitmap_sdl(computing_fract, name);
 		}
 
-		log_info("Fin calcul de fractales");
+		log_info("Fin du calcul de fractales");
 	}
 
-	return (void *) tmp;
+	return (void *) computing_fract;
 
 	error:
-		free(tmp);
+		free(computing_fract);
 		exit(EXIT_FAILURE);
 }
