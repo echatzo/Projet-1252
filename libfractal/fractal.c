@@ -18,10 +18,6 @@ struct fractal *fract = (struct fractal *) malloc(sizeof(struct fractal *));
 
 
   return fract;
-  error:
-    if(fract) free(fract);
-    if(fract->values) fractal_free(fract->values);
-    exit(EXIT_FAILURE);
 }
 
 void fractal_free(struct fractal *f)
