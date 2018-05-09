@@ -1,11 +1,2 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <unistd.h>
-#include "fractal.h"
-
-int main()
-{
-    /* TODO */
-
-    return 0;
-}
+#ifndef _FILE_READER_H
+#define _FILE_READER_H

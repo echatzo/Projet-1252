@@ -1,3 +1,9 @@
+#include <assert.h>
+#include <error.h>
+#include <getopt.h>
+#include <pthread.h>
+#include <semaphore.h>
+#include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
