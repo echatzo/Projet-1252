@@ -44,6 +44,11 @@ int main(int argc, char *argv[])
     }
     }
   }
+
+
+  buffer_size = thread_limit;
+	buffer = new_list();
+
     /* TODO */
 
     return 0;
