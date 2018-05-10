@@ -8,7 +8,7 @@ struct fractal {
     double a;
     double b;
     int* values;
-    double* average;
+    double average;
 } fract;
 
 /*
