@@ -39,7 +39,7 @@ cleanLib:
 	(cd libfractal; make clean)
 
 ## remove .o files
-clean: clean_lib
+clean: cleanLib
 				@echo "Cleaning files"
 	rm -f *.o
 

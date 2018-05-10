@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "reader.h"
+#include "file_reader.h"
 
 void *file_reader (char *name){
 
@@ -13,7 +13,7 @@ void *file_reader (char *name){
     perror("Error : ");
   }
 
-  fractal_t *new_fract = NULL;
+  struct fractal *new_fract = NULL;
   char line[500], name[64];
 	int width, height;
   double a, b;
