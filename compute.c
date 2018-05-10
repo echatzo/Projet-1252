@@ -37,7 +37,7 @@ void *compute(void)
 		int value = 0;
 
 		double average = 0;
-		double total = width * height;
+		double total = width * height; //superficie de la fractale
 
 		log_info("Lancement du calcul de fractales");
 		for ( y = 0; y < height ; y++) {
@@ -64,9 +64,9 @@ void *compute(void)
 		log_info("Fin du calcul de fractales");
 	}
 
-	return (void *) computing_fract;
+	return (void *) computing_fract; //retourne la fractale.
 
 	error:
-		free(computing_fract);
+		free(computing_fract); //libère la mémoire de la fractale
 		exit(EXIT_FAILURE);
 }
