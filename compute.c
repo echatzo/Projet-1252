@@ -43,12 +43,11 @@ void *compute(void)
 		for ( y = 0; y < height ; y++) {
 			for( x = 0; x < width ; x++)  {
 				value = fractal_compute_value(computing_fract, x, y);
-				average += value;
+				average += value;//incrémente la 'valeur' de la fractale
 			}
-			log_info("Vous etes ici");
 		}
 
-		average /= total;
+		average /= total; //divise la valeur totale de la fractale par sa superficie pour obtenir sa valeur moyenne.
 
 		computing_fract->average = average;
 
@@ -58,7 +57,7 @@ void *compute(void)
 		strcpy(name, computing_fract->name);
 		strcat(name, ".bmp");
 
-		if (draw_every_fract) { // option d active
+		if (draw_every_fract) { // genere le bitmap si l'option d est active
 			write_bitmap_sdl(computing_fract, name);
 		}
 
