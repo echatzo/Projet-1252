@@ -12,12 +12,6 @@ extern int curently_reading;
 
 
 
-//size of the buffer
-extern int buffer_size;
-//buffer
-extern struct node *buffer;
-extern struct node *first;
-extern struct node *last;
 //best average of the fractales
 extern double best_average;
 //factal which has the best average

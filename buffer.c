@@ -1,6 +1,11 @@
 #include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include "libfractal/fractal.h"
+#include "buffer.h"
+#include "main.h"
+#include "file_reader.h"
+#include "compute.h"
 
 
 struct node *new_list(){
