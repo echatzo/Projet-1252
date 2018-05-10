@@ -27,7 +27,7 @@ void add (fractal *added){
   }
 }
 
-void remove (){
+void remove_fract (){
   if (first == NULL){
     return;
   }

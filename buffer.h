@@ -5,12 +5,12 @@ struct node {
   struct fractal *fract;
   struct node *next;
   struct node *previous;
-}
+};
 
 struct node *new_list();
 
 void add (fractal *added);
 
-void remove();
+void remove_fract();
 
 #endif
