@@ -4,7 +4,7 @@
 
 
 struct node *new_list(){
-  struct node *buffer = (node *) malloc(list_length * sizeof(node));
+  struct node *buffer = (struct node *) malloc(list_length * sizeof(struct node));
   return buffer;
 }
 
