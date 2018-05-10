@@ -19,7 +19,7 @@ extern struct node *last;
 extern double best_average;
 //factal which has the best average
 extern struct fractal *best;
-
+//threads
 extern pthread_mutex_t mutex_buffer;
 extern pthread_mutex_t mutex_closing;
 extern pthread_mutex_t mutex_best;

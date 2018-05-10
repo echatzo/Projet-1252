@@ -46,9 +46,9 @@ int main(int argc, char *argv[])
 
   int o = 0;
   for (o = 1; o < argc - 1; o ++){
-    if (strcmp(argv[o], ARGOPT_D) == 0){  //searches for option -d
+    if (strcmp(argv[o], ARGOPT_D) == 0){  //searches if every fractal needs to be drawn
       draw_every_fract = true;
-  } else if ( strcmp(argv[o], ARGOPT_MAXTHREADS) == 0) {
+  } else if ( strcmp(argv[o], ARGOPT_MAXTHREADS) == 0) { //searches for a maximum amount of threads
       o++;
       if (o == argc) break;
       thread_limit = atoi(argv[o]);
