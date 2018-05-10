@@ -7,7 +7,7 @@
 void *file_reader (char *name){
 
   File *to_read = NULL;
-  to_read = fopen(name,"r");
+  *to_read = fopen(name,"r");
 
   if (to_read == NULL){
     perror("Error : ");
