@@ -13,7 +13,7 @@ TEST_LDFLAGS=-lcunit
 TEST_SRC=test/*.c
 TEST_OBJ=$(TEST_SRC:.c=.o)
 
-LIB_FILES=$(wildcard libfractal/*.a)
+LIBR=$(wildcard libfractal/*.a)
 
 all: lib main
 
@@ -28,7 +28,7 @@ libfractal_test.o: test/libfractal_test.c
 
 main: $(OBJ)
 	@echo "Building main"
-	$(CC) -o $@ $^ libfractal/libfractal.a $(LDFLAGS) $(CFLAGS)
+	$(CC) -o $@ $^ $(LIBR) $(LDFLAGS) $(CFLAGS)
 
 lib:
 			@echo "Accessing lib for making"
