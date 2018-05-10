@@ -10,7 +10,7 @@ extern int files_number;
 //number of files curently read
 extern int curently_reading;
 //size of the buffer
-extern buffer_size;
+extern int buffer_size;
 //buffer
 extern struct node *buffer;
 extern struct node *first;
