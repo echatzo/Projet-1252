@@ -1,15 +1,14 @@
 #include <stdlib.h>
+#include <string.h>
 #include "fractal.h"
 
 struct fractal *fractal_new(const char *name, int width, int height, double a, double b)
 {
 struct fractal *fract = (struct fractal *) malloc(sizeof(struct fractal *));
-  check_mem(fract);
   int n = 64;
   strncpy(fract->name, name, (size_t) n);
 
-  f->values = (int *) malloc(height * width * sizeof(int));
-  check_mem(fract);
+  fract->values = (int *) malloc(height * width * sizeof(int));
 
   fract->h = height;
   fract->w = width;

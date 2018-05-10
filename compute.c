@@ -28,7 +28,6 @@ void *compute(void)
 		pthread_mutex_unlock(&mutex_buffer);
 		sem_post(&empty);
 
-		check(!computing_fract, "dequeue error.");
 
 		int x = 0;
 		int y = 0;
@@ -39,7 +38,7 @@ void *compute(void)
 		double average = 0;
 		double total = width * height; //superficie de la fractale
 
-		log_info("Lancement du calcul de fractales");
+
 		for ( y = 0; y < height ; y++) {
 			for( x = 0; x < width ; x++)  {
 				value = fractal_compute_value(computing_fract, x, y);
@@ -61,12 +60,11 @@ void *compute(void)
 			write_bitmap_sdl(computing_fract, name);
 		}
 
-		log_info("Fin du calcul de fractales");
+
 	}
 
 	return (void *) computing_fract; //retourne la fractale.
 
-	error:
 		free(computing_fract); //libère la mémoire de la fractale
 		exit(EXIT_FAILURE);
 }

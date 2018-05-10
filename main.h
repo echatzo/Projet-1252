@@ -9,6 +9,9 @@ extern bool draw_every_fract;
 extern int files_number;
 //number of files curently read
 extern int curently_reading;
+
+
+
 //size of the buffer
 extern int buffer_size;
 //buffer
@@ -19,6 +22,9 @@ extern struct node *last;
 extern double best_average;
 //factal which has the best average
 extern struct fractal *best;
+
+
+
 //threads
 extern pthread_mutex_t mutex_buffer;
 extern pthread_mutex_t mutex_closing;

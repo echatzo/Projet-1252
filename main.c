@@ -59,12 +59,7 @@ int main(int argc, char *argv[])
     }
   }
 
-  log_info("Draw every fracatal option active?");
-  	if (draw_every_fract) log_info("Yes.");
-  	else log_info("No.");
-  	log_info("%d calculations threads.", thread_limit);
-  	log_info("There are %d inputs.", files_number);
-  	log_info("Output file is %s.", fileOut);
+
 
     int arg[thread_limit];
   	int e = 0;
@@ -85,24 +80,20 @@ int main(int argc, char *argv[])
   reader_threads = (pthread_t *) malloc(files_number * sizeof(pthread_t));
 	compute_threads = (pthread_t *) malloc(files_number * sizeof(pthread_t));
 
-  log_info("Creating reader threads");
-	for (o = 1; o < count_files; o++) {
-		check(!pthread_create(&(reader_threads[curently_reading]), NULL,
-					&reader, (void *)files[o]),
-					"Error while creating reader pthread");
-	} log_info("There are %d open files.", curently_reading);
 
-	log_info("Creating compute threads");
+	for (o = 1; o < count_files; o++) {
+		pthread_create(&(reader_threads[curently_reading]), NULL,
+					&reader, (void *)files[o]);
+	}
+
+
 	for (o = 0; o < thread_limit; o++) {
-		check(!pthread_create(&(compute_threads[o]), NULL,
-				&compute, &(arg[o])),
-				"Error while creating compute pthread.");
+	pthread_create(&(compute_threads[o]), NULL, &compute, &(arg[o]));
 	}
 
   for (o = 0; o < thread_limit; o++) {
   		struct fractal *fract_jetable;
-  		check(!pthread_join(compute_threads[o], (void **) &fract_jetable),
-  				"cannot join compute thread %i.", o);
+      pthread_join(compute_threads[o], (void **) &fract_jetable);
   		if ( best == NULL) {
   			best = fract_jetable;
   		} else if (best->average < fract_jetable->average) {
@@ -114,8 +105,6 @@ int main(int argc, char *argv[])
   	}
 
     e = write_bitmap_sdl(best, fileOut);
-
-    	check(!e, "Error while writing best fractal");
 
     return e;
     error:
