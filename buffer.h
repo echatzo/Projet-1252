@@ -9,4 +9,6 @@ struct node {
 
 struct node *new_list();
 
-int add (fractal *added);
+void add (fractal *added);
+
+void remove();
