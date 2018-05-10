@@ -12,3 +12,5 @@ struct node *new_list();
 void add (fractal *added);
 
 void remove();
+
+#endif

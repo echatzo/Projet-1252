@@ -32,9 +32,9 @@ void remove (){
   }
 
   if (first == last){
-    head = NULL;
+    first = NULL;
   }
 
-  tail = tail -> previous;
-  tail -> next = NULL;
+last = last -> previous;
+  last -> next = NULL;
 }
