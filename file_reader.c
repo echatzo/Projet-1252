@@ -3,6 +3,7 @@
 #include <string.h>
 #include <pthread.h>
 #include <semaphore.h>
+#include <stdbool.h>
 
 #include "file_reader.h"
 #include "buffer.h"
