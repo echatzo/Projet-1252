@@ -8,7 +8,7 @@ struct fractal {
     double a;
     double b;
     int* values;
-};
+}
 
 /*
  * fractal_new: alloue une nouvelle structure fractal
