@@ -26,6 +26,7 @@ extern pthread_mutex_t mutex_best;
 extern sem_t empty;
 extern sem_t full;
 
+//producer and consumer
 extern pthread_t *read_threads;
 extern pthread_t *compute_threads;
 
