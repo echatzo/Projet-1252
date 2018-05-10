@@ -1,7 +1,7 @@
 BIN=main
 
 CC=gcc
-CFLAGS=-g -Wall -W -DNDEBUG
+CFLAGS=-g -W -Wall -DNDEBUG
 LDFLAGS=-lpthread -lSDL
 
 SOURCES=$(wildcard *.c)  # searches for all .c
@@ -13,7 +13,9 @@ TEST_LDFLAGS=-lcunit
 TEST_SRC=test/*.c
 TEST_OBJ=$(TEST_SRC:.c=.o)
 
-all: main lib
+LIB_FILES=$(wildcard libfractal/*.a)
+
+all: lib main
 
 # Building *.o
 %.o: %.c $(HEADER)
@@ -25,7 +27,8 @@ libfractal_test.o: test/libfractal_test.c
 		$(CC) $^ -c -c $@ -lcunit
 
 main: $(OBJ)
-	$(CC) -o $@ $^ $(CFLAGS) -c main.c $(LDFLAGS)
+	@echo "Building main"
+	$(CC) -o $@ $^ libfractal/libfractal.a $(LDFLAGS) $(CFLAGS)
 
 lib:
 			@echo "Accessing lib for making"
