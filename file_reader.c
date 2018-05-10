@@ -14,7 +14,7 @@
 void *file_reader (char *file_name){
 
   FILE *to_read = NULL;
-  *to_read = fopen(file_name,"r");
+  to_read = fopen(file_name,"r");
 
   if (to_read == NULL){
     perror("Error : ");
