@@ -2,7 +2,7 @@
 #define _BUFFER_H
 
 struct node {
-  fractal_t *fract;
+  struct fractal *fract;
   struct node *next;
   struct node *previous;
 }
