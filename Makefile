@@ -10,29 +10,33 @@ HEADERS=$(SOURCES:.c=.h)
 OBJ=$(SOURCES:.c=.o)
 
 TEST_LDFLAGS=-lcunit
-TEST_SRC=test/*.c
+TEST_SRC=tests/*.c
 TEST_OBJ=$(TEST_SRC:.c=.o)
 
-all: main lib
+LIBR=$(wildcard libfractal/*.a)
+
+
+all: lib main
 
 # Building *.o
 %.o: %.c $(HEADER)
 	@echo "$^"
 	$(CC) $(LDFLAGS) -c $< $(CFLAGS) -Ilibfractal
 
-libfractal_test.o: test/libfractal_test.c
+testlibfractal.o: tests/testlibfractal.c
 		@echo "Building test"
 		$(CC) $^ -c -c $@ -lcunit
 
 main: $(OBJ)
-	$(CC) -o $@ $^ $(CFLAGS) -c main.c $(LDFLAGS)
+	@echo "Begin building main"
+	  $(CC) -o $@ $^ $(LIBR) $(LDFLAGS) $(CFLAGS)
 
 lib:
 			@echo "Accessing lib for making"
 	(cd libfractal; make)
 
 test: lib $(TEST_OBJ) libfractal/fractal.o
-		$(CC) -o $@ libfractal_test.o libfractal/fractal.o -lcunit
+		$(CC) -o $@ testlibfractal.o libfractal/fractal.o -lcunit
 
 #start clean in libfractal
 cleanLib:
