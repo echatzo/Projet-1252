@@ -14,11 +14,10 @@
 #include "libfractal/fractal.h"
 #include "main.h"
 
-void *compute(void *param)
+void *compute(void)
 {
 	struct fractal *computing_fract = NULL;
 
-	int *arg = (int *) param;
 
 	while (curently_reading != 0) {
 		computing_fract = NULL;
