@@ -12,6 +12,7 @@
 #include "buffer.h"
 #include "main.h"
 #include "file_reader.h"
+#include "compute.h"
 
 
 #define ARGOPT_D "-d"
@@ -84,7 +85,7 @@ int main(int argc, char *argv[])
 
 	for (o = 1; o < files_number; o++) {
 		pthread_create(&(reader_threads[curently_reading]), NULL,
-					&reader, (void *)files[o]);
+					&file_reader, (void *)files[o]);
 	}
 
 
