@@ -40,7 +40,7 @@ void *file_reader (char *file_name){
   }
 
   pthread_mutex_lock(&mutex_closing);
-	is_reading--;
+	curently_reading--;
 	pthread_mutex_unlock(&mutex_closing);
 
   return NULL;
