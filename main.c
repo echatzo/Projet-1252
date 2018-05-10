@@ -3,10 +3,12 @@
 #include <semaphore.h>
 #include <stdbool.h>
 #include <unistd.h>
+#include <pthread.h>
 #include "libfractal/fractal.h"
 #include "buffer.h"
 #include "main.h"
 #include "file_reader.h"
+
 
 #define ARGOPT_D "-d"
 #define ARGOPT_MAXTHREADS "--maxthreads"
@@ -24,6 +26,15 @@ struct node *last = NULL;
 
 double best_average = 0;
 struct fract *best = NULL;
+
+pthread_mutex_t mutex_buffer;
+pthread_mutex_t mutex_closing;
+pthread_mutex_t mutex_best;
+sem_t empty;
+sem_t full;
+
+pthread_t *reader_threads;
+pthread_t *calculator_threads;
 
 int main(int argc, char *argv[])
 {
@@ -45,10 +56,18 @@ int main(int argc, char *argv[])
     }
   }
 
+  log_info("Draw every fracatal option active?");
+  	if (draw_every_fract) log_info("Yes.");
+  	else log_info("No.");
+  	log_info("%d calculations threads.", thread_limit);
+  	log_info("There are %d inputs.", files_number);
+  	log_info("Output file is %s.", fileOut);
 
   buffer_size = thread_limit;
 	buffer = new_list();
 
+  reader_threads = (pthread_t *) malloc(count_files * sizeof(pthread_t));
+	calculator_threads = (pthread_t *) malloc(count_files * sizeof(pthread_t));
     /* TODO */
 
     return 0;
