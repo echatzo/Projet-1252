@@ -34,7 +34,7 @@ sem_t empty;
 sem_t full;
 
 pthread_t *reader_threads;
-pthread_t *calculator_threads;
+pthread_t *compute_threads;
 
 int main(int argc, char *argv[])
 {
@@ -63,11 +63,41 @@ int main(int argc, char *argv[])
   	log_info("There are %d inputs.", files_number);
   	log_info("Output file is %s.", fileOut);
 
+    int arg[thread_limit];
+  	int err = 0;
+
+  	for (o = 0; o < count_files; o++)  {
+  		printf("File %d : %s.\n", o+1, files[o]);
+  	}
+
+  	pthread_mutex_init(&mutex_buffer, NULL);
+  	pthread_mutex_init(&mutex_closing, NULL);
+  	pthread_mutex_init(&mutex_best, NULL);
+  	sem_init(&empty, 0, thread_limit);
+  	sem_init(&full, 0, 0);
+
   buffer_size = thread_limit;
 	buffer = new_list();
 
-  reader_threads = (pthread_t *) malloc(count_files * sizeof(pthread_t));
-	calculator_threads = (pthread_t *) malloc(count_files * sizeof(pthread_t));
+  reader_threads = (pthread_t *) malloc(files_number * sizeof(pthread_t));
+	compute_threads = (pthread_t *) malloc(files_number * sizeof(pthread_t));
+
+  log_info("Creating reader threads");
+	for (o = 1; o < count_files; o++) {
+		check(!pthread_create(&(reader_threads[is_reading]), NULL,
+					&reader, (void *)files[o]),
+					"Error while creating reader pthread");
+	} log_info("There are %d open files.", is_reading);
+
+	log_info("Creating compute threads");
+	for (o = 0; o < thread_limit; o++) {
+		check(!pthread_create(&(compute_threads[o]), NULL,
+				&compute, &(arg[o])),
+				"Error while creating compute pthread.");
+	}
+
+
+
     /* TODO */
 
     return 0;
