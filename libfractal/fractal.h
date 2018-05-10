@@ -2,13 +2,13 @@
 #define _FRACTAL_H
 
 struct fractal {
-    char[64] name;
+    char name[64];
     uint32_t w;
     uint32_t h;
     double a;
     double b;
     int* values;
-}
+} fract;
 
 /*
  * fractal_new: alloue une nouvelle structure fractal
