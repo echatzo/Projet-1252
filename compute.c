@@ -1,21 +1,21 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdint.h>
 #include <assert.h>
 #include <error.h>
 #include <getopt.h>
-#include <pthread.h>
 #include <semaphore.h>
 #include <stdbool.h>
-#include <stdio.h>
-#include <stdlib.h>
 #include <unistd.h>
-#include <stdint.h>
-
-#include "buffer.h"
-#include "compute.h"
-#include "file_reader.h"
+#include <pthread.h>
 #include "libfractal/fractal.h"
+#include "buffer.h"
 #include "main.h"
+#include "file_reader.h"
+#include "compute.h"
 
-void *compute(void)
+
+void *compute()
 {
 	struct fractal *computing_fract = NULL;
 

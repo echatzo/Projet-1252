@@ -4,6 +4,6 @@
 #define SIZE_MAX 500
 #define NAME_LEN 65
 
-void *compute(void *param);
+void *compute();
 
 #endif

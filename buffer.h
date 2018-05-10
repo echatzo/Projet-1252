@@ -17,7 +17,7 @@ void remove_fract();
 extern struct node *buffer;
 extern struct node *first;
 extern struct node *last;
-extern list_length;
+extern int list_length;
 
 
 #endif
