@@ -1,3 +1,4 @@
+BIN=main
 
 CC=gcc
 CFLAGS=-g -Wall -W -DNDEBUG
@@ -24,7 +25,7 @@ libfractal_test.o: test/libfractal_test.c
 		$(CC) $^ -c -c $@ -lcunit
 
 main: $(OBJ)
-	$(CC) $(CFLAGS) -c main.c -lpthread
+	$(CC) -o $@ $^ $(CFLAGS) -c main.c $(LDFLAGS)
 
 lib:
 			@echo "Accessing lib for making"
