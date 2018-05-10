@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+
 struct node *new_list(){
   struct node *buffer = (node *) malloc(list_length * sizeof(node));
   return buffer;
