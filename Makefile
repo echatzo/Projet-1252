@@ -3,9 +3,10 @@ CC=gcc
 CFLAGS=-g -Wall -W -DNDEBUG
 LDFLAGS=-lpthread -lSDL
 
-SOURCES=$(wildcard *.c)
-HEADERS=$(SRC:.c=.h)
-OBJ=$(SRC:.c=.o)
+SOURCES=$(wildcard *.c)  # searches for all .c
+
+HEADERS=$(SOURCES:.c=.h)
+OBJ=$(SOURCES:.c=.o)
 
 TEST_LDFLAGS=-lcunit
 TEST_SRC=test/*.c
@@ -30,9 +31,11 @@ buffer.o: buffer.c
 lib:
 	(cd libfractal; make)
 
+#start clean in libfractal
 cleanLib:
 	(cd libfractal; make clean)
 
+## remove .o files
 clean: clean_lib
 	rm -f *.o
 
