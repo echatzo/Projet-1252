@@ -8,7 +8,7 @@ struct node *new_list(){
   return buffer;
 }
 
-void add (fractal *added){
+void add (struct fractal *added){
 
   struct node *new;
 
