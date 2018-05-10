@@ -8,6 +8,7 @@
 #include <stdbool.h>
 #include <unistd.h>
 #include <pthread.h>
+#include <string.h>
 #include "libfractal/fractal.h"
 #include "buffer.h"
 #include "main.h"
@@ -25,7 +26,7 @@ void *compute()
 
 		sem_wait(&full);
 		pthread_mutex_lock(&mutex_buffer);
-		computing_fract = dequeue();
+		remove_fract(computing_fract);
 		pthread_mutex_unlock(&mutex_buffer);
 		sem_post(&empty);
 
