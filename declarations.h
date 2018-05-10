@@ -14,6 +14,7 @@ extern bool draw_every_fract;
 extern double best_average;
 
 extern struct fractal *best;
+extern struct fractal *computing_fract;
 
 extern struct node *buffer;
 extern struct node *first;

@@ -38,6 +38,7 @@ void add (struct fractal *added){
 }
 
 void remove_fract (){
+  
   if (first == NULL){
     return;
   }

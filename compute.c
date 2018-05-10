@@ -19,7 +19,7 @@
 
 void *compute(){
 
-	struct fractal *computing_fract = NULL;
+	computing_fract = NULL;
 
 	while (curently_reading != 0) {
 		computing_fract = NULL;

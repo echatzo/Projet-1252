@@ -16,7 +16,6 @@
 #include "compute.h"
 #include "declarations.h"
 
-
 #define ARGOPT_D "-d"
 #define ARGOPT_MAXTHREADS "--maxthreads"
 
@@ -25,15 +24,15 @@ draw_every_fract = false;
 thread_limit = 1;
 files_number = 0;
 buffer_size = 0;
-best_average = 0;
+best_average = 0.0;
 
 *buffer = NULL;
 *first = NULL;
 *last = NULL;
 *best = NULL;
 
-int main(int argc, char *argv[])
-{
+int main(int argc, char *argv[]){
+
   const char *files[argc];
 	const char *fileOut = argv[argc-1]; //finds output file name
 
@@ -70,7 +69,7 @@ int main(int argc, char *argv[])
   buffer_size = thread_limit;
 	buffer = new_list();
 
-  reader_threads = (pthread_t *) malloc(files_number * sizeof(pthread_t));
+  read_threads = (pthread_t *) malloc(files_number * sizeof(pthread_t));
 	compute_threads = (pthread_t *) malloc(files_number * sizeof(pthread_t));
 
 
