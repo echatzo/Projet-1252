@@ -65,7 +65,7 @@ int main(int argc, char *argv[])
     int arg[thread_limit];
   	int e = 0;
 
-  	for (o = 0; o < count_files; o++)  {
+  	for (o = 0; o < files_number; o++)  {
   		printf("File %d : %s.\n", o+1, files[o]);
   	}
 
@@ -82,7 +82,7 @@ int main(int argc, char *argv[])
 	compute_threads = (pthread_t *) malloc(files_number * sizeof(pthread_t));
 
 
-	for (o = 1; o < count_files; o++) {
+	for (o = 1; o < files_number; o++) {
 		pthread_create(&(reader_threads[curently_reading]), NULL,
 					&reader, (void *)files[o]);
 	}
