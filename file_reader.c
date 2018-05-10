@@ -28,10 +28,20 @@ void *file_reader (char *file_name){
   while(fgets(line, 500, to_read)){
     if (line[0] != '#' && sscanf(line, "%s %d %d %lf %lf", fract_name, &width, &height, &a, &b) == 5){
       new_fract = fractal_new(fract_name, width, height, a, b);
+
+      sem_wait(&empty);
+			pthread_mutex_lock(&mutex_buffer);
+			sem_wait(&full);
+			pthread_mutex_lock(&mutex_buffer);
     }
     else {
       perror("Error : ");
     }
   }
+
+  pthread_mutex_lock(&mutex_closing);
+	is_reading--;
+	pthread_mutex_unlock(&mutex_closing);
+
   return NULL;
 }
