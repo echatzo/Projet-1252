@@ -8,38 +8,29 @@
 #include <stdbool.h>
 #include <unistd.h>
 #include <pthread.h>
+
 #include "libfractal/fractal.h"
 #include "buffer.h"
 #include "main.h"
 #include "file_reader.h"
 #include "compute.h"
+#include "declarations.h"
 
 
 #define ARGOPT_D "-d"
 #define ARGOPT_MAXTHREADS "--maxthreads"
 
-bool draw_every_fract = false;
+draw_every_fract = false;
 
-int thread_limit = 1;
+thread_limit = 1;
+files_number = 0;
+buffer_size = 0;
+best_average = 0;
 
-int files_number = 0;
-
-int buffer_size = 0;
-struct node *buffer = NULL;
-struct node *first = NULL;
-struct node *last = NULL;
-
-double best_average = 0;
-struct fractal *best = NULL;
-
-pthread_mutex_t mutex_buffer;
-pthread_mutex_t mutex_closing;
-pthread_mutex_t mutex_best;
-sem_t empty;
-sem_t full;
-
-pthread_t *reader_threads;
-pthread_t *compute_threads;
+*buffer = NULL;
+*first = NULL;
+*last = NULL;
+*best = NULL;
 
 int main(int argc, char *argv[])
 {

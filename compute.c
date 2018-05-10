@@ -8,17 +8,18 @@
 #include <stdbool.h>
 #include <unistd.h>
 #include <pthread.h>
+
 #include "libfractal/fractal.h"
 #include "buffer.h"
 #include "main.h"
 #include "file_reader.h"
 #include "compute.h"
+#include "declarations.h"
 
 
-void *compute()
-{
+void *compute(){
+
 	struct fractal *computing_fract = NULL;
-
 
 	while (curently_reading != 0) {
 		computing_fract = NULL;

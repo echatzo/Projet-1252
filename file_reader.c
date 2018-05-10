@@ -11,6 +11,7 @@
 #include "compute.h"
 #include "libfractal/fractal.h"
 #include "main.h"
+#include "declarations.h"
 
 void *file_reader (char *file_name){
 

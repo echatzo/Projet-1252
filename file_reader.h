@@ -3,5 +3,4 @@
 
 void *file_reader (char *name);
 
-
 #endif
