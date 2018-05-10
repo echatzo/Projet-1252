@@ -44,6 +44,7 @@ clean: clean_lib
 	rm -f *.o
 
 
-
-run: # an easy launch for a fractal folder using 2 threads
+# an easy launch for a fractal folder using 2 threads
+run:
+	@echo "quick run"
 	./main -d --maxthreads 2 inputs/*.txt fileOut
