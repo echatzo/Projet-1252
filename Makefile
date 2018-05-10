@@ -12,16 +12,31 @@ TEST_SRC=test/*.c
 TEST_OBJ=$(TEST_SRC:.c=.o)
 
 all: main lib
-$(CC) $(CFLAGS) -o main main.o libfractal/libfractal.a $(LIB)
 
-main: main.c
-	$(CC) $(CFLAGS) -c main.c $(INCLUDE)
+# Building *.o
+%.o: %.c $(HEADER)
+	@echo "$^"
+	$(CC) $(LDFLAGS) -c $< $(CFLAGS) -Ilibfractal
+
+main: $(OBJ)
+	$(CC) $(CFLAGS) -c main.c -lpthread
+
+compute.o: compute.c
+	$(CC) -c compute.c $(CFLAGS) -lpthread
+
+buffer.o: buffer.c
+	$(CC) -c buffer.c $(CFLAGS) -lpthread
 
 lib:
-	make -C libfractal/
-
-clean:
-	rm *.o main
+	(cd libfractal; make)
 
 cleanLib:
-make clean -C libfractal/
+	(cd libfractal; make clean)
+
+clean: clean_lib
+	rm -f *.o
+
+
+
+run: # an easy launch for a fractal folder using 2 threads
+	./main -d --maxthreads 2 inputs/*.txt fileOut
