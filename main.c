@@ -28,7 +28,7 @@ struct node *first = NULL;
 struct node *last = NULL;
 
 double best_average = 0;
-struct fract *best = NULL;
+struct fractal *best = NULL;
 
 pthread_mutex_t mutex_buffer;
 pthread_mutex_t mutex_closing;
