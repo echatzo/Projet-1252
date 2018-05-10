@@ -67,7 +67,7 @@ int main(int argc, char *argv[])
   	log_info("Output file is %s.", fileOut);
 
     int arg[thread_limit];
-  	int err = 0;
+  	int e = 0;
 
   	for (o = 0; o < count_files; o++)  {
   		printf("File %d : %s.\n", o+1, files[o]);
@@ -113,9 +113,11 @@ int main(int argc, char *argv[])
   		}
   	}
 
+    e = write_bitmap_sdl(best, fileOut);
 
+    	check(!e, "Error while writing best fractal");
 
-    /* TODO */
-
-    return 0;
+    return e;
+    error:
+      exit(EXIT_FAILURE);
 }
