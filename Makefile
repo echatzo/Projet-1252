@@ -19,24 +19,28 @@ all: main lib
 	@echo "$^"
 	$(CC) $(LDFLAGS) -c $< $(CFLAGS) -Ilibfractal
 
+libfractal_test.o: test/libfractal_test.c
+		@echo "Building test"
+		$(CC) $^ -c -c $@ -lcunit
+
 main: $(OBJ)
 	$(CC) $(CFLAGS) -c main.c -lpthread
 
-compute.o: compute.c
-	$(CC) -c compute.c $(CFLAGS) -lpthread
-
-buffer.o: buffer.c
-	$(CC) -c buffer.c $(CFLAGS) -lpthread
-
 lib:
+			@echo "Accessing lib for making"
 	(cd libfractal; make)
+
+test: lib $(TEST_OBJ) libfractal/fractal.o
+		$(CC) -o $@ libfractal_test.o libfractal/fractal.o -lcunit
 
 #start clean in libfractal
 cleanLib:
+				@echo "Accessing lib for cleaning"
 	(cd libfractal; make clean)
 
 ## remove .o files
 clean: clean_lib
+				@echo "Cleaning files"
 	rm -f *.o
 
 
