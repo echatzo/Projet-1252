@@ -29,7 +29,7 @@ void *compute(void *param)
 		pthread_mutex_unlock(&mutex_buffer);
 		sem_post(&empty);
 
-		check(!computing_fract, "erreur de dequeue.");
+		check(!computing_fract, "dequeue error.");
 
 		int x = 0;
 		int y = 0;
@@ -40,7 +40,7 @@ void *compute(void *param)
 		double average = 0;
 		double total = width * height;
 
-		log_info("Lancement calcul de fractales");
+		log_info("Lancement du calcul de fractales");
 		for ( y = 0; y < height ; y++) {
 			for( x = 0; x < width ; x++)  {
 				value = fractal_compute_value(computing_fract, x, y);
