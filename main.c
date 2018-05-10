@@ -87,10 +87,10 @@ int main(int argc, char *argv[])
 
   log_info("Creating reader threads");
 	for (o = 1; o < count_files; o++) {
-		check(!pthread_create(&(reader_threads[is_reading]), NULL,
+		check(!pthread_create(&(reader_threads[curently_reading]), NULL,
 					&reader, (void *)files[o]),
 					"Error while creating reader pthread");
-	} log_info("There are %d open files.", is_reading);
+	} log_info("There are %d open files.", curently_reading);
 
 	log_info("Creating compute threads");
 	for (o = 0; o < thread_limit; o++) {

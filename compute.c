@@ -58,7 +58,7 @@ void *compute(void)
 		strcpy(name, computing_fract->name);
 		strcat(name, ".bmp");
 
-		if (print_all) { // option d active
+		if (draw_every_fract) { // option d active
 			write_bitmap_sdl(computing_fract, name);
 		}
 
