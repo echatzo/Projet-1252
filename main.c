@@ -57,7 +57,7 @@ int main(int argc, char *argv[])
       files[files_number] = argv[o];
       files_number++;
     }
-    }
+
   }
 
 
