@@ -37,13 +37,20 @@ test: lib $(TEST_OBJ) libfractal/fractal.o
 #start clean in libfractal
 cleanLib:
 				@echo "Accessing lib for cleaning"
-	(cd libfractal; make clean)
+	(cd libfractal; make shallowclean)
+
+deepcleanLib:
+					@echo "Accessing lib for cleaning"
+		(cd libfractal; make deepclean)
 
 ## remove .o files
-clean: cleanLib
+shallowclean: cleanLib
 				@echo "Cleaning files"
-	rm -f *.o
+	rm -f *.o main
 
+deepclean: deepcleanLib
+				@echo "Cleaning files"
+	rm -f *.o main
 
 # an easy launch for a fractal folder using 2 threads
 run:

@@ -14,6 +14,10 @@ $(LIBFILE): $(OBJ)
 *.o:
 	$(CC) -o $@ -c $< $(CFLAGS)
 
-clean:
+shallowclean:
 	@echo "cleaning libfractal"
-	rm -rf $(OBJ_FILES)
+	rm -rf *.o
+
+deepclean:
+		@echo "cleaning libfractal"
+		rm -rf *.o *.a
