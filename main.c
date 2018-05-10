@@ -74,7 +74,7 @@ int main(int argc, char *argv[]){
 
 
 	for (o = 1; o < files_number; o++) {
-		pthread_create(&(reader_threads[curently_reading]), NULL,
+		pthread_create(&(read_threads[curently_reading]), NULL,
 					&file_reader, (void *)files[o]);
 	}
 
