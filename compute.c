@@ -17,10 +17,9 @@
 #include "declarations.h"
 
 
-void *compute()
-{
-	struct fractal *computing_fract = NULL;
+void *compute(){
 
+	struct fractal *computing_fract = NULL;
 
 	while (curently_reading != 0) {
 		computing_fract = NULL;
