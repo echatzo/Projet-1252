@@ -99,6 +99,21 @@ int main(int argc, char *argv[])
 				"Error while creating compute pthread.");
 	}
 
+  for (o = 0; o < thread_limit; o++) {
+  		struct fractal *fract_jetable;
+  		check(!pthread_join(compute_threads[o], (void **) &fract_jetable),
+  				"Join calculation thread problem %i.", o);
+  		if ( best == NULL) {
+  			best = fract_jetable;
+  		} else if (best->average < fract_jetable->average) {
+  			log_info("Getting best of thread %i.", o);
+  			fractal_free((struct fractal *) best);
+  			best = (struct fractal *) fract_jetable;
+  		} else {
+  			fractal_free(fract_jetable);
+  		}
+  	}
+
 
 
     /* TODO */
