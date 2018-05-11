@@ -11,36 +11,36 @@ extern int height;
 extern double a;
 extern double b;
 
-void test_librfactal_get_name() {
+void test_lib_getname() {
   fractal_t *testf = fractal_new("testname", width, height, a, b);
   CU_ASSERT_EQUAL(fractal_get_name(testf), "testname");
   fractal_free(testf);
 }
-void test_libfractal_get_width() {
+void test_lib_getwidth() {
 	fractal_t *testf = fractal_new(name, 69, height, a, b);
 	CU_ASSERT_EQUAL(fractal_get_width(testf), 69);
 	fractal_free(testf);
 }
 
-void test_libfractal_get_height() {
+void test_lib_getheight() {
 	fractal_t *testf = fractal_new(name, width, 69, a, b);
 	CU_ASSERT_EQUAL(fractal_get_height(testf), 69);
 	fractal_free(testf);
 }
 
-void test_libfractal_get_a() {
+void test_lib_geta() {
 	fractal_t *testf = fractal_new(name, width, height, 69.0, b);
 	CU_ASSERT_EQUAL(fractal_get_a(testf), 69.0);
 	fractal_free(testf);
 }
 
-void test_libfractal_get_b() {
+void test_lib_getb() {
 	fractal_t *testf = fractal_new(name, width, height, a, 69.0);
 	CU_ASSERT_EQUAL(fractal_get_b(testf), 69.0);
 	fractal_free(testf);
 }
 
-void test_set_and_get_value(){
+void test_setvalue_and_getvalue(){
   fractal_t *testf = fractal_new(name, 15, 15, a, b);
   int xwidth = fractal_get_width(testf);
   int xheight = fractal_get_height(testf);
