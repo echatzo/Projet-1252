@@ -51,4 +51,4 @@ clean: cleanLib
 # an easy launch for a fractal folder using 2 threads
 run:
 	@echo "quick run"
-	./main -d --maxthreads 2 inputs/*.txt fileOut
+	./main -d --maxthreads 2 tests/inputs/*.txt fileOut
