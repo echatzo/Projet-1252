@@ -29,6 +29,8 @@ struct node *buffer = NULL;
 struct node *first = NULL;
 struct node *last = NULL;
 
+int curently_reading =0;
+
 double best_average = 0;
 struct fractal *best = NULL;
 

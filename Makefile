@@ -19,7 +19,7 @@ LIBR=$(wildcard libfractal/*.a)
 all: lib main
 
 # Building *.o
-%.o: %.c $(HEADER)
+%.o: %.c $(HEADERS)
 	@echo "$^"
 	$(CC) $(LDFLAGS) -c $< $(CFLAGS) -Ilibfractal
 
