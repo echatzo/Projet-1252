@@ -20,7 +20,7 @@ struct node *new_list(){
 
 void add (struct fractal *added){
 
-  struct node *new;
+  struct node *new = (struct node *) malloc (sizeof(struct node));
 
   new -> fract = added;
   new -> next = first;
@@ -38,7 +38,7 @@ void add (struct fractal *added){
 }
 
 void remove_fract (){
-  
+
   if (first == NULL){
     return;
   }
