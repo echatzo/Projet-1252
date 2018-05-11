@@ -3,5 +3,7 @@
 
 void *file_reader (char *name);
 
+int countlines(FILE *to_count);
+
 
 #endif

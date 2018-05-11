@@ -61,8 +61,6 @@ int main(int argc, char *argv[])
 
   }
 
-
-
     int arg[thread_limit];
   	int e = 0;
 

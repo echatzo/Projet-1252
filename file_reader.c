@@ -15,8 +15,8 @@
 void *file_reader (char *file_name){
 
   FILE *to_read = NULL;
-  int line_number = countLines(file_name);
   to_read = fopen(file_name,"r");
+  int line_number = countlines(to_read);
 
   if (to_read == NULL){
     perror("Error : ");
@@ -54,4 +54,24 @@ void *file_reader (char *file_name){
 	pthread_mutex_unlock(&mutex_closing);
 
   return NULL;
+}
+
+int countlines(FILE *to_count){
+
+  int ch=0;
+  int lines=0;
+
+  if (to_count == NULL){
+    return 0;
+  }
+
+  lines++;
+  while(!feof(to_read)){
+    ch = fgetc(to_read);
+    if(ch == '\n')
+    {
+      lines++;
+    }
+  }
+  return lines;
 }
