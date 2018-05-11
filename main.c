@@ -20,9 +20,9 @@
 
 bool draw_every_fract = false;
 
-int thread_limit = 1;
-
 int files_number = 0;
+
+int thread_limit = 1;
 
 int buffer_size = 0;
 struct node *buffer = NULL;
@@ -30,17 +30,21 @@ struct node *first = NULL;
 struct node *last = NULL;
 
 int curently_reading =0;
-
 double best_average = 0;
 struct fractal *best = NULL;
 
 pthread_mutex_t mutex_buffer;
+
 pthread_mutex_t mutex_closing;
+
 pthread_mutex_t mutex_best;
+
 sem_t empty;
+
 sem_t full;
 
 pthread_t *reader_threads;
+
 pthread_t *compute_threads;
 
 int main(int argc, char *argv[])
@@ -71,9 +75,13 @@ int main(int argc, char *argv[])
   	}
 
   	pthread_mutex_init(&mutex_buffer, NULL);
+
   	pthread_mutex_init(&mutex_closing, NULL);
+
   	pthread_mutex_init(&mutex_best, NULL);
+
   	sem_init(&empty, 0, thread_limit);
+
   	sem_init(&full, 0, 0);
 
   buffer_size = thread_limit;
@@ -105,7 +113,7 @@ int main(int argc, char *argv[])
   			fractal_free(fract_jetable);
   		}
   	}
-
+//write the bitmap for the best fractal
     e = write_bitmap_sdl(best, output_file);
 
     return e;

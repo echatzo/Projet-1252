@@ -7,13 +7,16 @@ LIBFILE=libfractal.a
 
 all: $(SRC) $(LIBFILE)
 
+#builder
 $(LIBFILE): $(OBJ)
 	@echo "making $@"
 	$(AR) -r $@ $^
 
+#.o maker
 *.o:
 	$(CC) -o $@ -c $< $(CFLAGS)
 
+#library cleaner, removes .o and .a files
 clean:
 		@echo "cleaning libfractal"
 		rm -rf *.o *.a

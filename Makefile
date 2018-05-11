@@ -15,7 +15,7 @@ TEST_OBJ=$(TEST_SRC:.c=.o)
 
 LIBR=$(wildcard libfractal/*.a)
 
-
+#builds libfractal then main
 all: lib main
 
 # Building *.o
@@ -23,18 +23,22 @@ all: lib main
 	@echo "$^"
 	$(CC) $(LDFLAGS) -c $< $(CFLAGS) -Ilibfractal
 
+
 testlibfractal.o: tests/testlibfractal.c
 		@echo "Building test"
 		$(CC) $^ -c -c $@ -lcunit
 
+#main builder
 main: $(OBJ)
 	@echo "Begin building main"
 	  $(CC) -o $@ $^ $(LIBR) $(LDFLAGS) $(CFLAGS)
 
+#libfractal builder
 lib:
 			@echo "Accessing lib for making"
 	(cd libfractal; make)
 
+#cunit test builder
 test: lib $(TEST_OBJ) libfractal/fractal.o
 		$(CC) -o $@ testlibfractal.o libfractal/fractal.o -lcunit
 
@@ -43,7 +47,7 @@ cleanLib:
 				@echo "Accessing lib for cleaning"
 	(cd libfractal; make clean)
 
-
+#cleaner, removes all .o files and the main executable
 clean: cleanLib
 				@echo "Cleaning files"
 	rm -f *.o main
