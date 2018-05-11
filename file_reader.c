@@ -22,11 +22,11 @@ void *file_reader (char *file_name){
   }
 
   struct fractal *new_fract = NULL;
-  char line[500], fract_name[64];
+  char line[line_length], fract_name[name_length];
 	int width, height;
   double a, b;
 
-  while(fgets(line, 500, to_read)){
+  while(fgets(line, line_length, to_read)){
     if (line[0] != '#' && sscanf(line, "%s %d %d %lf %lf", fract_name, &width, &height, &a, &b) == 5){
       new_fract = fractal_new(fract_name, width, height, a, b);
 

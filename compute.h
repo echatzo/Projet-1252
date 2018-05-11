@@ -1,8 +1,8 @@
 #ifndef _COMPUTE_H
 #define _COMPUTE_H
 
-#define SIZE_MAX 500
-#define NAME_LEN 65
+#define line_length 500
+#define name_length 65
 
 void *compute();
 
