@@ -10,6 +10,8 @@
 #include "file_reader.h"
 #include "compute.h"
 
+list_length = 0; 
+
 
 struct node *new_list(){
   struct node *buffer = (struct node *) malloc(list_length * sizeof(struct node));
