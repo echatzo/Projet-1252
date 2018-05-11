@@ -2,7 +2,6 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <CUnit/CUnit.h>
-
 #include "../libfractal/fractal.h"
 
 extern char *name;
