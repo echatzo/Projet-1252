@@ -31,7 +31,7 @@ void *file_reader (char *file_name){
 
   for (o=0; o < line_number; o++){
 
-    fgets(line, line_length, to_read));
+    fgets(line, line_length, to_read);
 
     if (line[0] != '#' && sscanf(line, "%s %d %d %lf %lf", fract_name, &width, &height, &a, &b) == 5){
       new_fract = fractal_new(fract_name, width, height, a, b);
@@ -66,8 +66,8 @@ int countlines(FILE *to_count){
   }
 
   lines++;
-  while(!feof(to_read)){
-    ch = fgetc(to_read);
+  while(!feof(to_count)){
+    ch = fgetc(to_count);
     if(ch == '\n')
     {
       lines++;
