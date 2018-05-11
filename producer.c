@@ -40,7 +40,7 @@ void *producer (char *file_name){
 			pthread_mutex_lock(&mutex_buffer);
       add_fract(new_fract);
 			sem_wait(&full);
-			pthread_mutex_lock(&mutex_buffer);
+			pthread_mutex_unlock(&mutex_buffer);
     }
     else {
       perror("Error : ");
