@@ -16,6 +16,8 @@
 void *file_reader (char *file_name){
 
   FILE *to_read = NULL;
+  int line_number = countLines(file_name);
+
   to_read = fopen(file_name,"r");
 
   if (to_read == NULL){
@@ -27,12 +29,18 @@ void *file_reader (char *file_name){
 	int width, height;
   double a, b;
 
-  while(fgets(line, line_length, to_read)){
+  int o;
+
+  for (o=0; o < line_number; o++){
+
+    fgets(line, line_length, to_read));
+
     if (line[0] != '#' && sscanf(line, "%s %d %d %lf %lf", fract_name, &width, &height, &a, &b) == 5){
       new_fract = fractal_new(fract_name, width, height, a, b);
 
       sem_wait(&empty);
 			pthread_mutex_lock(&mutex_buffer);
+      add_fract(new_fract);
 			sem_wait(&full);
 			pthread_mutex_lock(&mutex_buffer);
     }
@@ -40,6 +48,8 @@ void *file_reader (char *file_name){
       perror("Error : ");
     }
   }
+
+  fclose(to_read);
 
   pthread_mutex_lock(&mutex_closing);
 	curently_reading=0;
