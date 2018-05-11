@@ -1,0 +1,1183 @@
+commit dfa8cf15a75c14b2ca27e36bb204b96db064d569
+Author: Clément <clement.chardon@student.uclouvain.be>
+Date:   Fri May 11 17:42:23 2018 +0200
+
+    Ok
+
+ main.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 724edaa01b524c7350497a9e1d8ac14a3564859b
+Merge: 7de85de 0db611d
+Author: edouard <edouard.chatzopoulos@gmail.com>
+Date:   Fri May 11 17:39:35 2018 +0200
+
+    Merge remote-tracking branch 'origin/preview' into Main_branch
+
+commit 0db611d407575b1a9ff29da3a9308e12cb0bf361
+Author: Clément <clement.chardon@student.uclouvain.be>
+Date:   Fri May 11 17:36:51 2018 +0200
+
+    a
+
+ main.c     | 6 +-----
+ producer.c | 3 +--
+ 2 files changed, 2 insertions(+), 7 deletions(-)
+
+commit 7de85deb81442ac51cf239863b54099c53b9e468
+Merge: 1b1fa9d 8c974a4
+Author: edouard <edouard.chatzopoulos@gmail.com>
+Date:   Fri May 11 17:31:00 2018 +0200
+
+    Merge remote-tracking branch 'origin/preview' into Main_branch
+
+commit 8c974a4011b22700fe62109cd205e488a59f8a3a
+Author: Clément <clement.chardon@student.uclouvain.be>
+Date:   Fri May 11 17:23:00 2018 +0200
+
+    pas de closing
+
+ main.h     | 1 -
+ producer.c | 6 +-----
+ 2 files changed, 1 insertion(+), 6 deletions(-)
+
+commit 1b1fa9dd2cbcc99868a607526e4f543b8f48db05
+Author: edouard <edouard.chatzopoulos@gmail.com>
+Date:   Fri May 11 17:14:29 2018 +0200
+
+    main
+
+ main.h | 7 +++----
+ 1 file changed, 3 insertions(+), 4 deletions(-)
+
+commit ba2b1fc49400ac211f520a0d97512d3723c5ef8f
+Merge: bb83d2f 9222edc
+Author: edouard <edouard.chatzopoulos@gmail.com>
+Date:   Fri May 11 17:11:28 2018 +0200
+
+    Merge remote-tracking branch 'origin/preview' into Main_branch
+
+commit 9222edcc41a403b04be4fb8fadd99d8ea9f2326e
+Author: Clément <clement.chardon@student.uclouvain.be>
+Date:   Fri May 11 17:11:16 2018 +0200
+
+    voila
+
+ file_reader.c | 77 -----------------------------------------------------------
+ 1 file changed, 77 deletions(-)
+
+commit bb83d2fbbd8ee94d8b2aa1810cc2da85171eff7e
+Author: edouard <edouard.chatzopoulos@gmail.com>
+Date:   Fri May 11 17:09:54 2018 +0200
+
+    comments
+
+ .gitignore          |  1 +
+ Makefile            |  8 ++++++--
+ buffer.c            |  2 ++
+ libfractal/Makefile |  3 +++
+ main.c              | 16 ++++++++++++----
+ 5 files changed, 24 insertions(+), 6 deletions(-)
+
+commit 6fa7b456c1d50df8ccfcf5c7dc1ec5d1a494336f
+Author: Clément <clement.chardon@student.uclouvain.be>
+Date:   Fri May 11 17:08:40 2018 +0200
+
+    test
+
+ file_reader.c | 77 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ producer.c    |  2 +-
+ 2 files changed, 78 insertions(+), 1 deletion(-)
+
+commit 9072346cd6ca31dfe42665ef42af86bc544be71c
+Author: edouard <edouard.chatzopoulos@gmail.com>
+Date:   Fri May 11 16:47:55 2018 +0200
+
+    Readme update
+
+ README.md | 20 ++++++++++++++++++--
+ 1 file changed, 18 insertions(+), 2 deletions(-)
+
+commit a48c0755230d75e0f136ba4333a00165ae9fa9fa
+Author: edouard <edouard.chatzopoulos@gmail.com>
+Date:   Fri May 11 16:33:02 2018 +0200
+
+    testlib
+
+ tests/testlibfractal.c | 52 +++++++++++++++++++++++---------------------------
+ 1 file changed, 24 insertions(+), 28 deletions(-)
+
+commit 0eb8f97a0239a43d897ac8c3798852811d1c9d59
+Author: edouard <edouard.chatzopoulos@gmail.com>
+Date:   Fri May 11 16:31:36 2018 +0200
+
+    tests
+
+ tests/testlibfractal.c | 12 ++++++------
+ 1 file changed, 6 insertions(+), 6 deletions(-)
+
+commit d8a80fd2fd8d235ea9c4e22deac8441a8efeee1e
+Author: edouard <edouard.chatzopoulos@gmail.com>
+Date:   Fri May 11 16:29:25 2018 +0200
+
+    ok
+
+ main | Bin 46679 -> 0 bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit b0c9d77a9149cfde0b6d514462b8cfd436c14978
+Author: edouard <edouard.chatzopoulos@gmail.com>
+Date:   Fri May 11 16:28:26 2018 +0200
+
+    producer
+
+ buffer.c                    |   4 ++--
+ compute.c                   |   2 +-
+ file_reader.h               |   9 ---------
+ main                        | Bin 0 -> 46679 bytes
+ main.c                      |   4 ++--
+ file_reader.c => producer.c |   4 ++--
+ producer.h                  |   9 +++++++++
+ tests/inputs/input3.txt     |   4 +++-
+ 8 files changed, 19 insertions(+), 17 deletions(-)
+
+commit d539ad422b8b319b47a8cdb7a185f9ded44484c2
+Author: edouard <edouard.chatzopoulos@gmail.com>
+Date:   Fri May 11 16:23:21 2018 +0200
+
+    inputs edit
+
+ tests/inputs/input3.txt | 2 --
+ 1 file changed, 2 deletions(-)
+
+commit f114539b38b72b96cd341134c8247f73b6778eb4
+Author: edouard <edouard.chatzopoulos@gmail.com>
+Date:   Fri May 11 16:17:11 2018 +0200
+
+    inputs dirrectory
+
+ Makefile                            |  2 +-
+ inputs/input2.txt                   | 50 -------------------------------------
+ {inputs => tests/inputs}/input1.txt |  0
+ tests/inputs/input2.txt             | 50 +++++++++++++++++++++++++++++++++++++
+ {inputs => tests/inputs}/input3.txt |  0
+ 5 files changed, 51 insertions(+), 51 deletions(-)
+
+commit c5acf41f5b08e0acd01061f1dbd8d082979ce2da
+Author: edouard <edouard.chatzopoulos@gmail.com>
+Date:   Fri May 11 16:16:20 2018 +0200
+
+    test inputs
+
+ inputs/{01input_testavg.txt => input1.txt}         | 0
+ inputs/{02input_fewbig.txt => input2.txt}          | 0
+ tests/00input_test_ignore.txt => inputs/input3.txt | 0
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+
+commit bf1e43cab422bae3c948fdde84db52a3364294f0
+Author: edouard <edouard.chatzopoulos@gmail.com>
+Date:   Fri May 11 16:09:50 2018 +0200
+
+    ok
+
+ main | Bin 38632 -> 0 bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 4ad78969676637b86f43e0266259898a368c3ab1
+Author: edouard <edouard.chatzopoulos@gmail.com>
+Date:   Fri May 11 16:08:04 2018 +0200
+
+    inputs remove
+
+ inputs/02input_fewbig.txt | 149 ----------------------------------------------
+ main                      | Bin 0 -> 38632 bytes
+ 2 files changed, 149 deletions(-)
+
+commit 5b6f47d69322eae0bb4e5c36cea3d2d007c7c90b
+Merge: 85630c4 a9743f3
+Author: edouard <edouard.chatzopoulos@gmail.com>
+Date:   Fri May 11 16:06:23 2018 +0200
+
+    Merge remote-tracking branch 'origin/preview' into preview
+
+commit 85630c4ff6562bcc9776fd7e6c99e55269584260
+Author: edouard <edouard.chatzopoulos@gmail.com>
+Date:   Fri May 11 16:06:17 2018 +0200
+
+    remove test 3
+
+ inputs/02input_fewbig.txt | 801 ----------------------------------------------
+ 1 file changed, 801 deletions(-)
+
+commit afcb361d80e21c34f04e283d2b941382b916e2f5
+Author: edouard <edouard.chatzopoulos@gmail.com>
+Date:   Fri May 11 16:04:12 2018 +0200
+
+    remove test
+
+ inputs/03input_manysmall.txt | 1000000 ---------------------------------------
+ 1 file changed, 1000000 deletions(-)
+
+commit a9743f3d39b5803f577b2eb9e97799b7ab496788
+Author: edouard <edouard.chatzopoulos@gmail.com>
+Date:   Fri May 11 16:04:12 2018 +0200
+
+    remove test
+
+ inputs/03input_manysmall.txt | 1000000 ---------------------------------------
+ 1 file changed, 1000000 deletions(-)
+
+commit e7131a3c055ef4276a796a88dbb4c9f620b1b1e9
+Author: edouard <edouard.chatzopoulos@gmail.com>
+Date:   Fri May 11 16:00:44 2018 +0200
+
+    Auto stash before merge of "preview" and "origin/preview"
+
+ Makefile            | 12 ++----------
+ libfractal/Makefile |  6 +-----
+ 2 files changed, 3 insertions(+), 15 deletions(-)
+
+commit dc782bbcb4730d5fe6bb84d5b7337194e073b004
+Author: Clément <clement.chardon@student.uclouvain.be>
+Date:   Fri May 11 15:58:58 2018 +0200
+
+    test
+
+ {inputs => tests}/00input_test_ignore.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit f34f3600488677af2358368370302a2d99652d09
+Merge: b8f034d 057d36c
+Author: Clément <clement.chardon@student.uclouvain.be>
+Date:   Fri May 11 15:49:02 2018 +0200
+
+    Merge branch 'preview' of https://github.com/echatzo/Projet-1252 into preview
+
+commit b8f034d77a15977bdf542af3fee9d657f7065a14
+Author: Clément <clement.chardon@student.uclouvain.be>
+Date:   Fri May 11 15:48:58 2018 +0200
+
+    debug
+
+ buffer.c | 2 ++
+ 1 file changed, 2 insertions(+)
+
+commit 057d36cdacaac6488d68962c19e5a2e4680505af
+Author: edouard <edouard.chatzopoulos@gmail.com>
+Date:   Fri May 11 15:47:02 2018 +0200
+
+    init curently reading
+
+ main.c | 2 ++
+ 1 file changed, 2 insertions(+)
+
+commit 9bba6c3ef989d2cea78bc784421bb5e280accdfe
+Author: edouard <edouard.chatzopoulos@gmail.com>
+Date:   Fri May 11 15:32:27 2018 +0200
+
+    makefile typo
+
+ Makefile | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 3578fa6fe0951a2d5c6440e16654c29c3fc6bb8e
+Author: edouard <edouard.chatzopoulos@gmail.com>
+Date:   Fri May 11 15:16:36 2018 +0200
+
+    variable error
+
+ file_reader.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+commit 346b548c943e4708ad2bf5ba11e44290cde129be
+Author: Clément <clement.chardon@student.uclouvain.be>
+Date:   Fri May 11 11:58:47 2018 +0200
+
+    countlines
+
+ file_reader.c | 22 +++++++++++++++++++++-
+ file_reader.h |  2 ++
+ main.c        |  2 --
+ 3 files changed, 23 insertions(+), 3 deletions(-)
+
+commit 922067505a3e7389765e35c8264b07e629cb036a
+Author: Clément <clement.chardon@student.uclouvain.be>
+Date:   Fri May 11 10:25:38 2018 +0200
+
+    for
+
+ file_reader.c | 11 ++++++++++-
+ main.c        |  4 ++--
+ 2 files changed, 12 insertions(+), 3 deletions(-)
+
+commit 510f24bf95b7abe55a1bcb9f752814c7d3d91e2b
+Author: Clément <clement.chardon@student.uclouvain.be>
+Date:   Fri May 11 10:20:31 2018 +0200
+
+    up
+
+ buffer.c      | 4 ++--
+ buffer.h      | 2 +-
+ compute.c     | 7 ++++---
+ compute.h     | 4 ++--
+ file_reader.c | 4 ++--
+ 5 files changed, 11 insertions(+), 10 deletions(-)
+
+commit abb7e784bad786a6bd526b3d6b0d3e4f58ee8333
+Author: edouard <edouard.chatzopoulos@gmail.com>
+Date:   Fri May 11 01:12:14 2018 +0200
+
+    A VERIFIER CLEM   fract dequeue
+
+ compute.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+commit bf499026b6959ef86c9eeebb107b76206c97d203
+Author: edouard <edouard.chatzopoulos@gmail.com>
+Date:   Fri May 11 00:56:03 2018 +0200
+
+    test inputs
+
+ inputs/00input_test_ignore.txt |       6 +
+ inputs/01input_testavg.txt     |       5 +
+ inputs/02input_fewbig.txt      |    1000 +
+ inputs/03input_manysmall.txt   | 1000000 +++++++++++++++++++++++++++++++++++++
+ 4 files changed, 1001011 insertions(+)
+
+commit c97f22b478cc1ad9ed26a2092d414759f8889f95
+Author: edouard <edouard.chatzopoulos@gmail.com>
+Date:   Fri May 11 00:53:42 2018 +0200
+
+    test + makefile
+
+ Makefile               | 14 +++++++++-----
+ tests/testlibfractal.c |  2 +-
+ 2 files changed, 10 insertions(+), 6 deletions(-)
+
+commit 40e1fbc2ecddf687f659af35b8fd67a5ffaecb76
+Author: edouard <edouard.chatzopoulos@gmail.com>
+Date:   Thu May 10 22:33:55 2018 +0200
+
+    main delete
+
+ main | Bin 16955 -> 0 bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 0e3a6096e1b6a774c4a4108f97e5baf582e62686
+Author: edouard <edouard.chatzopoulos@gmail.com>
+Date:   Thu May 10 22:31:10 2018 +0200
+
+    deepclean and shallowclean
+
+ Makefile            |  13 ++++++++++---
+ libfractal/Makefile |   8 ++++++--
+ main                | Bin 0 -> 16955 bytes
+ 3 files changed, 16 insertions(+), 5 deletions(-)
+
+commit 4a0669ecd7a178e058cfb5e6131f20f71d41a605
+Author: Clément <clement.chardon@student.uclouvain.be>
+Date:   Thu May 10 22:09:49 2018 +0200
+
+    up
+
+ main | Bin 14504 -> 0 bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 5193b26650f6dff9b756780901689c63b54ce7fa
+Author: edouard <edouard.chatzopoulos@gmail.com>
+Date:   Thu May 10 21:42:32 2018 +0200
+
+    libfractal makefile corrections
+
+ Makefile            |   3 ++-
+ libfractal/Makefile |   5 ++---
+ main                | Bin 0 -> 14504 bytes
+ 3 files changed, 4 insertions(+), 4 deletions(-)
+
+commit 2fa1a015131ae5d81c814d9e1da949d8616dcf68
+Merge: 2fbd18e 3e4a1e9
+Author: Clément <clement.chardon@student.uclouvain.be>
+Date:   Thu May 10 21:24:24 2018 +0200
+
+    Merge branch 'master' of https://github.com/echatzo/Projet-1252
+
+commit 2fbd18e3132d8a998d3129ad32255c033f388f2b
+Author: Clément <clement.chardon@student.uclouvain.be>
+Date:   Thu May 10 21:22:17 2018 +0200
+
+    o
+
+ buffer.h             |  2 +-
+ compute.c            | 18 +++++++++---------
+ compute.h            |  2 +-
+ libfractal/fractal.h |  2 +-
+ 4 files changed, 12 insertions(+), 12 deletions(-)
+
+commit 3e4a1e927ef3fc2600c9520b83bb5666e539613c
+Author: edouard <edouard.chatzopoulos@gmail.com>
+Date:   Thu May 10 21:17:57 2018 +0200
+
+    from double* to double
+
+ libfractal/fractal.h | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit a87d8440da076df4dc379373ba40e607437b3388
+Author: edouard <edouard.chatzopoulos@gmail.com>
+Date:   Thu May 10 21:17:10 2018 +0200
+
+    average, int to double
+
+ libfractal/fractal.h | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 9f65b81e371d19e9b23c5989fa6baeb01a045117
+Author: edouard <edouard.chatzopoulos@gmail.com>
+Date:   Thu May 10 21:16:10 2018 +0200
+
+    compute parameters
+
+ compute.h | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit e6c40cbee30748cfbfca13a5482ef3dab0b9a41c
+Author: echatzo <edouard.chatzopoulos@gmail.com>
+Date:   Thu May 10 20:55:43 2018 +0200
+
+    buffer include stdint
+
+ buffer.c | 1 +
+ 1 file changed, 1 insertion(+)
+
+commit bbca287b13e6f6887be97d992a2d85b80d114430
+Author: echatzo <edouard.chatzopoulos@gmail.com>
+Date:   Thu May 10 20:54:15 2018 +0200
+
+    sem
+
+ buffer.c | 2 ++
+ 1 file changed, 2 insertions(+)
+
+commit e072ef2fde8c97d7caa819a0c76b5b5960eebc76
+Author: Clément <clement.chardon@student.uclouvain.be>
+Date:   Thu May 10 20:47:18 2018 +0200
+
+    Safe
+
+ buffer.c | 5 +++++
+ buffer.h | 1 +
+ main.h   | 6 ------
+ 3 files changed, 6 insertions(+), 6 deletions(-)
+
+commit 81430399529a586eb2f9cde12d541539dc847004
+Author: Clément <clement.chardon@student.uclouvain.be>
+Date:   Thu May 10 20:29:52 2018 +0200
+
+    TEst
+
+ buffer.c | 2 +-
+ buffer.h | 6 ++++++
+ 2 files changed, 7 insertions(+), 1 deletion(-)
+
+commit e1eee4c847667fe475507dbd8a01a0588142753f
+Author: echatzo <edouard.chatzopoulos@gmail.com>
+Date:   Thu May 10 20:14:20 2018 +0200
+
+    compilation error correctio
+
+ libfractal/fractal.h | 1 +
+ main.c               | 3 ++-
+ 2 files changed, 3 insertions(+), 1 deletion(-)
+
+commit 807d9f8902d92216e5291c0dbb744d108bb7ad6b
+Author: echatzo <edouard.chatzopoulos@gmail.com>
+Date:   Thu May 10 20:03:03 2018 +0200
+
+    variable duplicate correction
+
+ main.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+commit 0a64d1c42acb9debca4931bca19064f344faa598
+Author: echatzo <edouard.chatzopoulos@gmail.com>
+Date:   Thu May 10 20:00:38 2018 +0200
+
+    bracket correction
+
+ main.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 77a5b3586ee44bb2e08498dc8f527ba356331f68
+Author: edouard <edouard.chatzopoulos@gmail.com>
+Date:   Thu May 10 18:56:18 2018 +0200
+
+    error correction
+
+ compute.c     | 1 +
+ file_reader.c | 1 +
+ main.c        | 1 +
+ 3 files changed, 3 insertions(+)
+
+commit e4ce2d2b9d1971757e7eb43091c5aec65747566f
+Author: Clément <clement.chardon@student.uclouvain.be>
+Date:   Thu May 10 18:49:03 2018 +0200
+
+    fractal
+
+ main.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit e4ed9d93ea518400604cec966db75d077d67713d
+Author: edouard <edouard.chatzopoulos@gmail.com>
+Date:   Thu May 10 18:36:37 2018 +0200
+
+    Auto stash before merge of "master" and "origin/master"
+
+ libfractal/fractal.c | 1 +
+ 1 file changed, 1 insertion(+)
+
+commit 2c43edf425a1956c428ac91e8b0424bb46240fb7
+Author: Clément <clement.chardon@student.uclouvain.be>
+Date:   Thu May 10 18:35:11 2018 +0200
+
+    a
+
+ buffer.c | 2 +-
+ buffer.h | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+commit 0ca0972c07d2eb198ee8a09973894f096ea5c4bc
+Author: Clément <clement.chardon@student.uclouvain.be>
+Date:   Thu May 10 18:34:09 2018 +0200
+
+    yeah
+
+ buffer.c | 2 +-
+ buffer.h | 4 ++--
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+
+commit 67a514a3f921afa84db5c1d71f344b56c9b14642
+Author: edouard <edouard.chatzopoulos@gmail.com>
+Date:   Thu May 10 18:31:16 2018 +0200
+
+    Auto stash before merge of "master" and "origin/master"
+
+ libfractal/fractal.h | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+commit 919cfe35e65953453480706be404dbe5c202e293
+Merge: e50c18f c70792a
+Author: Clément <clement.chardon@student.uclouvain.be>
+Date:   Thu May 10 18:29:48 2018 +0200
+
+    Merge branch 'master' of https://github.com/echatzo/Projet-1252
+
+commit e50c18febce98fff0693ca5e9e569b32c3e9c006
+Author: Clément <clement.chardon@student.uclouvain.be>
+Date:   Thu May 10 18:29:38 2018 +0200
+
+    curently
+
+ file_reader.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit c70792a2625a39ee26c329e3f4f0eea8262025e4
+Author: edouard <edouard.chatzopoulos@gmail.com>
+Date:   Thu May 10 18:28:28 2018 +0200
+
+    remove ;
+
+ libfractal/fractal.h | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit f4a69423a3fb9cdc22a8cd36d059a3d5f589b24f
+Author: Clément <clement.chardon@student.uclouvain.be>
+Date:   Thu May 10 18:18:01 2018 +0200
+
+    essai
+
+ file_reader.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit a298493c42fc68a59ad8aa739662b342d241bbb0
+Author: Clément <clement.chardon@student.uclouvain.be>
+Date:   Thu May 10 18:16:22 2018 +0200
+
+    thread
+
+ file_reader.c | 10 ++++++++++
+ 1 file changed, 10 insertions(+)
+
+commit f1d31c3da20c7829b4a039a9eb9387184e6ca8f5
+Author: edouard <edouard.chatzopoulos@gmail.com>
+Date:   Thu May 10 17:54:41 2018 +0200
+
+    include bool
+
+ file_reader.c | 1 +
+ 1 file changed, 1 insertion(+)
+
+commit f2eb9857b26a482570d1b71d4bd374feb0f6b617
+Author: edouard <edouard.chatzopoulos@gmail.com>
+Date:   Thu May 10 17:47:57 2018 +0200
+
+    struct fractal
+
+ buffer.h | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 3a7a990c0974f64c215536bd2e50f9f6ca3c358b
+Author: Clément <clement.chardon@student.uclouvain.be>
+Date:   Thu May 10 17:45:17 2018 +0200
+
+    Majuscules
+
+ file_reader.c | 6 +++++-
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+
+commit 97295f847cf2d8b208ad9477f52a405085e3e008
+Author: Clément <clement.chardon@student.uclouvain.be>
+Date:   Thu May 10 17:40:47 2018 +0200
+
+    include
+
+ buffer.c      | 1 +
+ file_reader.c | 2 ++
+ 2 files changed, 3 insertions(+)
+
+commit 848da58de1a794f77c7e44d1e7502e8adc0cf5a7
+Author: Clément <clement.chardon@student.uclouvain.be>
+Date:   Thu May 10 17:09:24 2018 +0200
+
+    fract_name
+
+ file_reader.c | 10 +++++-----
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+
+commit d58e75d85b058b3b182ad991c8ee9d6cc75c2996
+Author: Clément <clement.chardon@student.uclouvain.be>
+Date:   Thu May 10 17:04:37 2018 +0200
+
+    Pointeur
+
+ file_reader.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 934d4d4bd263a6947f02ae6f0604d00cb04a4080
+Author: Clément <clement.chardon@student.uclouvain.be>
+Date:   Thu May 10 17:00:20 2018 +0200
+
+    endif
+
+ buffer.c      | 6 +++---
+ buffer.h      | 2 ++
+ file_reader.h | 3 +++
+ 3 files changed, 8 insertions(+), 3 deletions(-)
+
+commit af977a650e125b781e18bfd825b2ec7ce3623834
+Author: edouard <edouard.chatzopoulos@gmail.com>
+Date:   Thu May 10 16:56:21 2018 +0200
+
+    filereader
+
+ Makefile      | 2 +-
+ file_reader.c | 4 ++--
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+
+commit 55a4dc85ee61f596f5b5650f4f069f222f0a726a
+Author: edouard <edouard.chatzopoulos@gmail.com>
+Date:   Thu May 10 16:46:16 2018 +0200
+
+    corrections
+
+ compute.c            |  6 ++----
+ libfractal/fractal.c |  5 ++---
+ main.c               | 27 ++++++++-------------------
+ main.h               |  6 ++++++
+ 4 files changed, 18 insertions(+), 26 deletions(-)
+
+commit a7da2583c9ea46fac8ac31482e81e2034e557144
+Author: edouard <edouard.chatzopoulos@gmail.com>
+Date:   Thu May 10 16:09:15 2018 +0200
+
+    quick run
+
+ Makefile | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+
+commit 3f9424205c02f06fa578dabc3719236e8280d27c
+Author: edouard <edouard.chatzopoulos@gmail.com>
+Date:   Thu May 10 16:05:30 2018 +0200
+
+    Ajout de commentaires
+
+ main.h | 1 +
+ 1 file changed, 1 insertion(+)
+
+commit d607e3acb604042b7dfc6436863afc45542d36e0
+Author: edouard <edouard.chatzopoulos@gmail.com>
+Date:   Thu May 10 16:03:51 2018 +0200
+
+    ajout de commentaires
+
+ compute.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+commit 6c2f1fa8d7fde90ab4cca92d23b460be4c11924d
+Author: edouard <edouard.chatzopoulos@gmail.com>
+Date:   Thu May 10 16:02:21 2018 +0200
+
+    Ajout de commentaires
+
+ compute.c | 7 +++----
+ 1 file changed, 3 insertions(+), 4 deletions(-)
+
+commit 1a99722cd459fa23623bbb7878556e0652693bd1
+Author: edouard <edouard.chatzopoulos@gmail.com>
+Date:   Thu May 10 15:59:06 2018 +0200
+
+    main progression
+
+ main.c | 4 ++--
+ main.h | 2 +-
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+
+commit f47e471218cb57d2641c3c7a590bff685c3cff10
+Author: edouard <edouard.chatzopoulos@gmail.com>
+Date:   Thu May 10 15:55:24 2018 +0200
+
+    readme
+
+ README.md | 9 +++++++++
+ 1 file changed, 9 insertions(+)
+
+commit 15dfcfc5fca3d82cc126cca57d24439f52a862cd
+Author: edouard <edouard.chatzopoulos@gmail.com>
+Date:   Thu May 10 15:13:51 2018 +0200
+
+    Makefile clean
+
+ Makefile | 16 ++++++++++------
+ 1 file changed, 10 insertions(+), 6 deletions(-)
+
+commit 137896c37624cd132619844c3e2586aa9e5ee164
+Merge: a131cf2 c1ccbbf
+Author: edouard <edouard.chatzopoulos@gmail.com>
+Date:   Thu May 10 15:07:09 2018 +0200
+
+    Merge remote-tracking branch 'origin/master'
+
+commit c1ccbbf5e62f3cb22cc41287fbd70c6905800ea6
+Author: Clément <clement.chardon@student.uclouvain.be>
+Date:   Thu May 10 15:03:42 2018 +0200
+
+    file_reader.h complet
+
+ file_reader.h | 2 ++
+ 1 file changed, 2 insertions(+)
+
+commit 4723aaf3734d958ca659d7d55b92c91101668d63
+Author: Clément <clement.chardon@student.uclouvain.be>
+Date:   Thu May 10 15:01:55 2018 +0200
+
+    Buffer.h complet
+
+ buffer.h | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+commit a131cf26deea50a5ebcbeeb6e8ca90b0853c4457
+Author: edouard <edouard.chatzopoulos@gmail.com>
+Date:   Thu May 10 15:00:34 2018 +0200
+
+    main
+
+ main.c | 10 ++++++----
+ 1 file changed, 6 insertions(+), 4 deletions(-)
+
+commit b2cfae53f10d2eb799b57dc46602a37f279f6bb7
+Author: edouard <edouard.chatzopoulos@gmail.com>
+Date:   Thu May 10 14:53:04 2018 +0200
+
+    main
+
+ main.c | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+
+commit 4eb5ad0e4b0b8178d3457a83a808fbe4e4883a8c
+Author: edouard <edouard.chatzopoulos@gmail.com>
+Date:   Thu May 10 14:51:39 2018 +0200
+
+    main
+
+ main.c | 15 +++++++++++++++
+ 1 file changed, 15 insertions(+)
+
+commit 2ec085fffbc96ca18f2d02da766020c2f1f0c4b5
+Author: edouard <edouard.chatzopoulos@gmail.com>
+Date:   Thu May 10 14:43:57 2018 +0200
+
+    small correction
+
+ compute.c | 2 +-
+ main.c    | 4 ++--
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+
+commit 49d468cd2c0ecd1db2115c330b1d46fe84d49668
+Author: edouard <edouard.chatzopoulos@gmail.com>
+Date:   Thu May 10 14:32:50 2018 +0200
+
+    Makefile advance
+
+ Makefile | 9 ++++++---
+ 1 file changed, 6 insertions(+), 3 deletions(-)
+
+commit 2d84a39d0863cfe29360b804cda7ab5df9a0d393
+Author: edouard <edouard.chatzopoulos@gmail.com>
+Date:   Thu May 10 14:27:24 2018 +0200
+
+    main
+
+ main.c | 3 +++
+ 1 file changed, 3 insertions(+)
+
+commit efe415ca1499a907cf666e568f9e30f75c2a2034
+Author: edouard <edouard.chatzopoulos@gmail.com>
+Date:   Thu May 10 14:20:54 2018 +0200
+
+    main advance
+
+ main.c | 36 +++++++++++++++++++++++++++++++++---
+ 1 file changed, 33 insertions(+), 3 deletions(-)
+
+commit 4a417759731f6fb7c15393d2c17f14be6f987e7a
+Author: edouard <edouard.chatzopoulos@gmail.com>
+Date:   Thu May 10 14:07:51 2018 +0200
+
+    pthreads
+
+ main.c | 19 +++++++++++++++++++
+ main.h | 11 +++++++++++
+ 2 files changed, 30 insertions(+)
+
+commit 838ef9dff550131dfc18431d8fba148de31e03a9
+Author: edouard <edouard.chatzopoulos@gmail.com>
+Date:   Thu May 10 13:33:46 2018 +0200
+
+    libfractal makefile
+
+ libfractal/Makefile | 5 +++++
+ 1 file changed, 5 insertions(+)
+
+commit 9de8ad546f2aac94d34b08a269e4ddbba0cd7ec1
+Author: edouard <edouard.chatzopoulos@gmail.com>
+Date:   Thu May 10 13:14:25 2018 +0200
+
+    suppression paramètre
+
+ compute.c | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+
+commit 2ad7193391b5f8b64823ba563fa9326a96c7d2d2
+Author: edouard <edouard.chatzopoulos@gmail.com>
+Date:   Thu May 10 12:47:48 2018 +0200
+
+    Makefile
+
+ Makefile | 31 +++++++++++++++++++++++--------
+ 1 file changed, 23 insertions(+), 8 deletions(-)
+
+commit 5f84227c1b3ba473f0d8b5c37d5d2d22ba67429b
+Author: edouard <edouard.chatzopoulos@gmail.com>
+Date:   Thu May 10 12:21:17 2018 +0200
+
+    makefile
+
+ Makefile | 28 +++++++++++++++++++++++++++-
+ 1 file changed, 27 insertions(+), 1 deletion(-)
+
+commit e389df8d473e5f667cc8308d82e48b7153adadfb
+Author: edouard <edouard.chatzopoulos@gmail.com>
+Date:   Thu May 10 08:55:04 2018 +0200
+
+    buffersize
+
+ main.h | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 771f119b1351ab91bcfa1238f54b8234a133dd71
+Author: edouard <edouard.chatzopoulos@gmail.com>
+Date:   Thu May 10 08:28:46 2018 +0200
+
+    minor changes
+
+ compute.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+commit d47e4fac025c4330d2e9f83dd0f08db12aa5e305
+Author: edouard <edouard.chatzopoulos@gmail.com>
+Date:   Thu May 10 07:55:45 2018 +0200
+
+    gitignore
+
+ .gitignore | 36 ++++++++++++++++++++++++++++++++++++
+ 1 file changed, 36 insertions(+)
+
+commit 2d054ca71028dc2aa3c80d57298a011a611c2f1d
+Author: edouard <edouard.chatzopoulos@gmail.com>
+Date:   Wed May 9 22:23:19 2018 +0200
+
+    Compute
+
+ compute.c | 30 +++++++++++++++---------------
+ main.h    |  2 ++
+ 2 files changed, 17 insertions(+), 15 deletions(-)
+
+commit 52318403b6101fbca44a5436a7b988de273fd95f
+Author: edouard <edouard.chatzopoulos@gmail.com>
+Date:   Wed May 9 19:57:22 2018 +0200
+
+    Compute
+
+ compute.c | 74 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ compute.h |  9 ++++++++
+ main.c    |  5 +++++
+ 3 files changed, 88 insertions(+)
+
+commit 8d70d316e3d52e6d58edc47edbe78a52031fa176
+Author: edouard <edouard.chatzopoulos@gmail.com>
+Date:   Wed May 9 19:38:05 2018 +0200
+
+    main additions
+
+ libfractal/Makefile |  2 +-
+ main.c              | 18 ++++++++++++++++++
+ 2 files changed, 19 insertions(+), 1 deletion(-)
+
+commit dd29d95f6a7860fe93f7ed7a844335f27b03895e
+Author: edouard <edouard.chatzopoulos@gmail.com>
+Date:   Wed May 9 17:52:05 2018 +0200
+
+    main.c
+
+ main.c | 16 ++++++++++++++++
+ 1 file changed, 16 insertions(+)
+
+commit 885ddc530935a3f132b4f6a400b1f3f4d552b019
+Author: edouard <edouard.chatzopoulos@gmail.com>
+Date:   Wed May 9 17:42:07 2018 +0200
+
+    adding global variables to main.h
+
+ main.h | 14 ++++++++++----
+ 1 file changed, 10 insertions(+), 4 deletions(-)
+
+commit 4ae2a950454964e4f69a37b212b7524c612c9a50
+Author: Unknown <edouard.chatzopoulos@gmail.com>
+Date:   Wed May 9 17:33:37 2018 +0200
+
+    main.h
+
+ main.h | 13 +++++++++++++
+ 1 file changed, 13 insertions(+)
+
+commit f57828a78ff1967d6c18df3a9971547f15854534
+Merge: 2f8c471 93ca087
+Author: Unknown <edouard.chatzopoulos@gmail.com>
+Date:   Wed May 9 17:23:19 2018 +0200
+
+    Merge remote-tracking branch 'origin/master'
+
+commit 93ca087666ae9e2adbb9fdd2e189141b952a2e8a
+Merge: 438df10 4f02838
+Author: Clément <clement.chardon@student.uclouvain.be>
+Date:   Wed May 9 17:22:02 2018 +0200
+
+    Merge branch 'master' of https://github.com/echatzo/Projet-1252
+
+commit 2f8c471dfc580ee01e70729def86876ae056c2f8
+Author: Unknown <edouard.chatzopoulos@gmail.com>
+Date:   Wed May 9 17:04:45 2018 +0200
+
+    add main
+
+ main.c | 9 +++++++--
+ main.h | 0
+ 2 files changed, 7 insertions(+), 2 deletions(-)
+
+commit 4f02838fef2fc675ae0964959719129aa89e2f07
+Author: Unknown <edouard.chatzopoulos@gmail.com>
+Date:   Wed May 9 16:53:35 2018 +0200
+
+    tests
+
+ tests/{test1.c => testlibfractal.c} | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 438df10a595c9f7f4eb6223150fe05aa8ce2c4c8
+Merge: d975fae ff483c2
+Author: Clément <clement.chardon@student.uclouvain.be>
+Date:   Wed May 9 16:51:47 2018 +0200
+
+    Merge branch 'master' of https://github.com/echatzo/Projet-1252
+
+commit ddb3cfe4da31ef3aefc79af3b204c98aed638a9e
+Author: Unknown <edouard.chatzopoulos@gmail.com>
+Date:   Wed May 9 16:46:17 2018 +0200
+
+    mistake
+
+ libfractal/fractal.c | 4 ----
+ 1 file changed, 4 deletions(-)
+
+commit ff483c2e2715895aa41ea65c1aade5db5915ef50
+Author: Unknown <edouard.chatzopoulos@gmail.com>
+Date:   Wed May 9 16:43:54 2018 +0200
+
+    struct
+
+ libfractal/fractal.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit ff81c194a68fdcf265f111f0e5f01d2c872d6719
+Author: Unknown <edouard.chatzopoulos@gmail.com>
+Date:   Wed May 9 16:34:48 2018 +0200
+
+    tests
+
+ tests/test1.c | 96 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ tests/test2.c |  0
+ 2 files changed, 96 insertions(+)
+
+commit a764493fc847b30a428b1fb53573362ff859ccde
+Author: Unknown <edouard.chatzopoulos@gmail.com>
+Date:   Wed May 9 15:50:22 2018 +0200
+
+    ajout des fichiers test dans la structure
+
+ tests/test1.c | 0
+ tests/test2.c | 0
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+
+commit d975fae7e4fc3b61f62bf7c7daacc303109bcaf1
+Author: Clément <clement.chardon@student.uclouvain.be>
+Date:   Wed May 9 15:27:41 2018 +0200
+
+    Début buffer
+
+ buffer.c             | 41 +++++++++++++++++------------------------
+ buffer.h             | 40 +++++++++-------------------------------
+ file_reader.c        |  4 +++-
+ libfractal/fractal.c |  2 +-
+ 4 files changed, 30 insertions(+), 57 deletions(-)
+
+commit f3aff46cdef74b7696aeb433b11ed663963d5ad9
+Author: Clément <clement.chardon@student.uclouvain.be>
+Date:   Wed May 9 10:25:45 2018 +0200
+
+    return
+
+ file_reader.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 412a1036bbcb5264031c4a28527de3d5d41b798e
+Author: Clément <clement.chardon@student.uclouvain.be>
+Date:   Wed May 9 10:22:27 2018 +0200
+
+    sans ds store
+
+ .DS_Store     | Bin 8196 -> 0 bytes
+ buffer.c      |  34 ++++++++++++++++++++++++++++++++++
+ buffer.h      |  34 ++++++++++++++++++++++++++++++++++
+ file_reader.c |  29 +++++++++++++++++++++++------
+ file_reader.h |  13 ++-----------
+ 5 files changed, 93 insertions(+), 17 deletions(-)
+
+commit 23fe3eeaec33f7d9b40b739bc543494f8e4433e6
+Author: Clément <clement.chardon@student.uclouvain.be>
+Date:   Wed May 9 09:44:21 2018 +0200
+
+    file reader
+
+ .DS_Store     | Bin 0 -> 8196 bytes
+ file_reader.c |  11 +++++++++++
+ file_reader.h |  11 +++++++++++
+ 3 files changed, 22 insertions(+)
+
+commit be6a2767ed82b100e8c51c9b0e1aaf66bba82d3c
+Author: echatzo <edouard.chatzopoulos@gmail.com>
+Date:   Sun May 6 17:22:43 2018 +0200
+
+    undo grid changes
+
+ libfractal/fractal.c | 4 ++--
+ libfractal/fractal.h | 2 +-
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+
+commit 975000dca0a04969b24b2a1c2c012ee795082d29
+Author: echatzo <edouard.chatzopoulos@gmail.com>
+Date:   Sun May 6 16:12:24 2018 +0200
+
+    changing grid start form 1 to 0
+
+ libfractal/fractal.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+commit 3429d824b1d90433cb4a9ef38f8a40eff424cc1e
+Author: echatzo <edouard.chatzopoulos@gmail.com>
+Date:   Sun May 6 16:07:08 2018 +0200
+
+    linear values
+
+ libfractal/fractal.h | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+commit 7a15b8ccbf6276abb179ab29cdfd6a61ff08939a
+Author: echatzo <edouard.chatzopoulos@gmail.com>
+Date:   Sun May 6 16:04:20 2018 +0200
+
+    fractal.h and fractal.c minor updates
+
+ libfractal/fractal.c | 10 +++++-----
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+
+commit b59c079aac52b29f2bdc16ef2a4494ac454b7772
+Author: Unknown <edouard.chatzopoulos@gmail.com>
+Date:   Sun May 6 14:59:02 2018 +0200
+
+    update factal.h
+
+ libfractal/fractal.h | 11 ++++++++---
+ 1 file changed, 8 insertions(+), 3 deletions(-)
+
+commit 42c374b5dd6a3a189bcdadedca631efe0dcb6827
+Author: Unknown <edouard.chatzopoulos@gmail.com>
+Date:   Sun May 6 14:54:28 2018 +0200
+
+    modifications de structure
+
+ Projet 1252/README.md | 1 -
+ 1 file changed, 1 deletion(-)
+
+commit f1d63e37100b6fa1998a78ca0938b15bb689a40a
+Author: echatzo <38432020+echatzo@users.noreply.github.com>
+Date:   Sun May 6 14:42:49 2018 +0200
+
+    Add files via upload
+
+ Makefile              |   1 +
+ Projet 1252/README.md |   1 +
+ libfractal/Makefile   |  15 +++++++
+ libfractal/fractal.c  |  70 +++++++++++++++++++++++++++++++
+ libfractal/fractal.h  | 112 ++++++++++++++++++++++++++++++++++++++++++++++++++
+ libfractal/tools.c    | 103 ++++++++++++++++++++++++++++++++++++++++++++++
+ main.c                |  11 +++++
+ 7 files changed, 313 insertions(+)
+
+commit f2ef133f7181b39ba8fb59017cf02d01e51b7e3d
+Author: Unknown <edouard.chatzopoulos@gmail.com>
+Date:   Sun May 6 14:34:52 2018 +0200
+
+    Initial commit
+
+ README.md | 1 +
+ 1 file changed, 1 insertion(+)
