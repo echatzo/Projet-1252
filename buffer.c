@@ -7,10 +7,10 @@
 #include "libfractal/fractal.h"
 #include "buffer.h"
 #include "main.h"
-#include "file_reader.h"
+#include "producer.h"
 #include "compute.h"
 
-list_length = 0; 
+list_length = 0;
 
 
 struct node *new_list(){

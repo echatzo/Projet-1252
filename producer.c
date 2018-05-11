@@ -6,13 +6,13 @@
 #include <semaphore.h>
 #include <stdbool.h>
 
-#include "file_reader.h"
+#include "producer.h"
 #include "buffer.h"
 #include "compute.h"
 #include "libfractal/fractal.h"
 #include "main.h"
 
-void *file_reader (char *file_name){
+void *producer (char *file_name){
 
   FILE *to_read = NULL;
   to_read = fopen(file_name,"r");
