@@ -9,7 +9,7 @@ struct node {
 
 struct node *new_list();
 
-void add (struct fractal *added);
+void add_fract (struct fractal *added);
 
 void remove_fract();
 

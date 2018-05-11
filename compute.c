@@ -44,7 +44,7 @@ void *compute(){
 		for ( y = 0; y < height ; y++) {
 			for( x = 0; x < width ; x++)  {
 				value = fractal_compute_value(computing_fract, x, y);
-				average += value;//incrémente la 'valeur' de la fractale
+				average += (double) value;//incrémente la 'valeur' de la fractale
 			}
 		}
 

@@ -18,7 +18,7 @@ struct node *new_list(){
   return buffer;
 }
 
-void add (struct fractal *added){
+void add_fract (struct fractal *added){
 
   struct node *new = (struct node *) malloc (sizeof(struct node));
 
