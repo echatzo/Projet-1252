@@ -44,7 +44,7 @@ pthread_t *compute_threads;
 int main(int argc, char *argv[])
 {
   const char *files[argc];
-	const char *fileOut = argv[argc-1]; //finds output file name
+	const char *output_file = argv[argc-1]; //finds output file name
 
   int o = 0;
   for (o = 1; o < argc - 1; o ++){
@@ -106,7 +106,7 @@ int main(int argc, char *argv[])
   		}
   	}
 
-    e = write_bitmap_sdl(best, fileOut);
+    e = write_bitmap_sdl(best, output_file);
 
     return e;
     error:
