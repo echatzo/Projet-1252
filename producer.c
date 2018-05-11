@@ -48,11 +48,7 @@ void *producer (char *file_name){
   }
 
   fclose(to_read);
-
-  pthread_mutex_lock(&mutex_closing);
-	curently_reading--;
-	pthread_mutex_unlock(&mutex_closing);
-
+  
   return NULL;
 }
 
