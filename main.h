@@ -17,7 +17,9 @@ extern double best_average;
 //factal which has the best average
 extern struct fractal *best;
 
-
+//producer and consumer
+extern pthread_t *read_threads;
+extern pthread_t *compute_threads;
 
 //threads
 extern pthread_mutex_t mutex_buffer;
@@ -26,8 +28,5 @@ extern pthread_mutex_t mutex_best;
 extern sem_t empty;
 extern sem_t full;
 
-//producer and consumer
-extern pthread_t *read_threads;
-extern pthread_t *compute_threads;
 
 #endif
