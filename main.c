@@ -29,7 +29,7 @@ struct node *buffer = NULL;
 struct node *first = NULL;
 struct node *last = NULL;
 
-int curently_reading =0;
+int curently_reading =;
 double best_average = 0;
 struct fractal *best = NULL;
 
@@ -69,10 +69,6 @@ int main(int argc, char *argv[])
 
     int arg[thread_limit];
   	int e = 0;
-
-  	for (o = 0; o < files_number; o++)  {
-  		printf("File %d : %s.\n", o+1, files[o]);
-  	}
 
   	pthread_mutex_init(&mutex_buffer, NULL);
 

@@ -46,9 +46,8 @@ void *producer (char *file_name){
       perror("Error : ");
     }
   }
-
+  curently_reading--;
   fclose(to_read);
-  
   return NULL;
 }
 
