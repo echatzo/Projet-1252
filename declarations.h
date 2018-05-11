@@ -1,8 +1,8 @@
 #ifndef _DECLARATIONS_H
 #define _DECLARATIONS_H
 
-#define SIZE_MAX 500
-#define NAME_LEN 65
+#define line_length 500
+#define name_length 65
 
 extern int thread_limit;
 extern int list_length;

@@ -26,7 +26,8 @@ void *compute(){
 
 		sem_wait(&full);
 		pthread_mutex_lock(&mutex_buffer);
-		computing_fract = dequeue();
+		computing_fract = last;
+		remove_fract();
 		pthread_mutex_unlock(&mutex_buffer);
 		sem_post(&empty);
 
