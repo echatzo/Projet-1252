@@ -21,7 +21,6 @@ extern struct fractal *best;
 
 //threads
 extern pthread_mutex_t mutex_buffer;
-extern pthread_mutex_t mutex_closing;
 extern pthread_mutex_t mutex_best;
 extern sem_t empty;
 extern sem_t full;
