@@ -41,18 +41,10 @@ test: lib $(TEST_OBJ) libfractal/fractal.o
 #start clean in libfractal
 cleanLib:
 				@echo "Accessing lib for cleaning"
-	(cd libfractal; make shallowclean)
+	(cd libfractal; make clean)
 
-deepcleanLib:
-					@echo "Accessing lib for cleaning"
-		(cd libfractal; make deepclean)
 
-## remove .o files
-shallowclean: cleanLib
-				@echo "Cleaning files"
-	rm -f *.o main
-
-deepclean: deepcleanLib
+clean: cleanLib
 				@echo "Cleaning files"
 	rm -f *.o main
 
