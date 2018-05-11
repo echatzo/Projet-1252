@@ -6,13 +6,13 @@
 #include <semaphore.h>
 #include <stdbool.h>
 
-#include "producer.h"
+#include "file_reader.h"
 #include "buffer.h"
 #include "compute.h"
 #include "libfractal/fractal.h"
 #include "main.h"
 
-void *producer (char *file_name){
+void *file_reader (char *file_name){
 
   FILE *to_read = NULL;
   to_read = fopen(file_name,"r");
@@ -40,7 +40,7 @@ void *producer (char *file_name){
 			pthread_mutex_lock(&mutex_buffer);
       add_fract(new_fract);
 			sem_wait(&full);
-			pthread_mutex_unlock(&mutex_buffer);
+			pthread_mutex_lock(&mutex_buffer);
     }
     else {
       perror("Error : ");
